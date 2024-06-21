@@ -17,3 +17,32 @@
     overflow: hidden;
 }
 
+.service{
+    background-image: url("https://cdn.prod.website-files.com/646c6ec121d9bb039374fb89/64e48a24b183ebd8d0c257d4_Vector-min.webp");
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding-bottom: 0;
+    display: inline-block;
+    padding-left: 21px;
+    padding-right: 10px;
+}
+
+.firstox{
+    transform: rotateX(356deg);
+}
+.secondbox{
+    position: relative;
+    top: -224px;
+    transform: rotateX(335deg);
+}
+.thirdbox{
+    position: relative;
+    top: -443px;
+    transform: rotateX(327deg);
+}
+.fourthbox{
+    position: relative;
+    top: -667px;
+    transform: rotateX(318deg);
+}

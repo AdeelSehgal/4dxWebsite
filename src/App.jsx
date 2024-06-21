@@ -8,6 +8,7 @@ import HomeVideo4 from './Components/HomeVideo4'
 import HomeVideo5 from './Components/HomeVideo5'
 import HomeVideo6 from './Components/HomeVideo6'
 import Footer from './Components/Footer'
+import ServicesSection from './Components/ServicesSection'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -22,6 +23,7 @@ function App() {
       <HomeVideo4/>
       <HomeVideo5/>
       <HomeVideo6/>
+      <ServicesSection/>
       <Footer/>
 
     </>
