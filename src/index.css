@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.letstalk{
+    background-color: #c9ff00;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    height: 42px;
+    margin-bottom: 8px;
+    display: flex;
+    overflow: hidden;
+}
+
