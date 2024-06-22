@@ -2,7 +2,7 @@ import React from 'react'
 
 const Navbar = () => {
     return (
-        <div className='w-[95%] bg-black text-white my-3 flex justify-between items-center h-20 mx-auto rounded-xl px-16'>
+        <div className='w-[95%] bg-black text-white my-3 flex justify-between items-center h-20 mx-auto rounded-xl px-16  absolute z-[3] left-0 right-0  '>
             <div className='cursor-pointer'>
                 <img src="https://cdn.prod.website-files.com/646c6ec121d9bb039374fb89/6512a6905ed7ebbc2cd9f781_Group%2010100.svg" alt="" />
             </div>

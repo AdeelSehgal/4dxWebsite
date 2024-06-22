@@ -7,8 +7,8 @@ const TermsandConditions = () => {
         <div className=''>
             <Navbar />
 
-            <div className='px-12 '>
-                <h1 className='text-center text-[55px] font-semibold my-20'>Terms of Service</h1>
+            <div className='px-12  bg-white z-[2] relative rounded-b-3xl pb-10 mb-[100vh]  pt-[50px]'>
+                <h1 className='text-center text-[55px] font-semibold py-20'>Terms of Service</h1>
                 <div className='px-12'>
                     <h2 className='text-[32px] font-bold '>1. Acceptance of Terms</h2>
                     <p className='text-[18px] text-[#858585] my-4 '>These Terms of Service (this “Agreement”) between Buzz Interactive, LLC (“we”, “us” or “We Want Design”) and you govern your access and use of our web platform and website made available through <a className='text-zinc-800 font-medium underline' href="www.wewantdesign.co">www.wewantdesign.co</a> (this “Site”) and the subscription or other services we provide (the “Services”).  By using this Site and accessing our Services in any manner, you acknowledge that you have read, understood, and agree to be bound by this Agreement.This Site is controlled and operated by us from our offices within the United States. <br /> <br />
@@ -258,8 +258,6 @@ const TermsandConditions = () => {
                     <h2 className='text-[32px] font-bold '>20. Entire Agreement</h2>
                     <p className='text-[18px] text-[#858585] my-4 '>20.1 If you have executed a separate agreement with us applicable to your access to and use of this Site or our Services, then the terms and conditions of that agreement prevail to the extent of any conflict with this Agreement. In all other cases, this Agreement constitutes the entire agreement between the parties concerning its subject matter and supersedes all prior communications and proposals.</p>
                 </div>
-
-
             </div>
             <Footer />
         </div>
