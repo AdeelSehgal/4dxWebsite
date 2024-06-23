@@ -13,6 +13,7 @@ import ServicesSection from './Components/ServicesSection'
 import TextAnimation from './Components/TextAnimation'
 import TermsandConditions from "./Components/TermsandConditions"
 import PrivacyandPolicy from "./Components/PrivacyandPolicy"
+import Membership_section from './Components/Membership_section'
 
 
 
@@ -21,11 +22,11 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/TermsandConditions",
-      element: <TermsandConditions />
+      element: <><Navbar /> <TermsandConditions /> <Footer /> </>
     },
     {
       path: "/PrivacyandPolicy",
-      element: <PrivacyandPolicy />
+      element: <><Navbar /> <PrivacyandPolicy /> <Footer /> </>
     },
 
     {
@@ -41,6 +42,9 @@ function App() {
           <HomeVideo4 />
           <HomeVideo5 />
           <HomeVideo6 />
+          <ServicesSection/>
+          <Membership_section/>
+
         </div>
         <Footer />
       </>)

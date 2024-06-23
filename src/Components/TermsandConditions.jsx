@@ -5,7 +5,6 @@ import Footer from './Footer'
 const TermsandConditions = () => {
     return (
         <div className=''>
-            <Navbar />
 
             <div className='px-12  bg-white z-[2] relative rounded-b-3xl pb-10 mb-[100vh]  pt-[50px]'>
                 <h1 className='text-center text-[55px] font-semibold py-20'>Terms of Service</h1>
@@ -259,7 +258,7 @@ const TermsandConditions = () => {
                     <p className='text-[18px] text-[#858585] my-4 '>20.1 If you have executed a separate agreement with us applicable to your access to and use of this Site or our Services, then the terms and conditions of that agreement prevail to the extent of any conflict with this Agreement. In all other cases, this Agreement constitutes the entire agreement between the parties concerning its subject matter and supersedes all prior communications and proposals.</p>
                 </div>
             </div>
-            <Footer />
+            
         </div>
     )
 }

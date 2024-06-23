@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 
-.letstalk{
+.letstalk {
     background-color: #c9ff00;
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;
@@ -17,7 +17,7 @@
     overflow: hidden;
 }
 
-.service{
+.service {
     background-image: url("https://cdn.prod.website-files.com/646c6ec121d9bb039374fb89/64e48a24b183ebd8d0c257d4_Vector-min.webp");
     background-position: 50%;
     background-repeat: no-repeat;
@@ -28,21 +28,105 @@
     padding-right: 10px;
 }
 
-.firstox{
+
+.membership {
+    background-image: url("https://cdn.prod.website-files.com/646c6ec121d9bb039374fb89/64e48a24b183ebd8d0c257d4_Vector-min.webp");
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding-bottom: 0;
+    display: inline-block;
+    padding-left: 21px;
+    padding-right: 10px;
+}
+
+.firstox {
     transform: rotateX(356deg);
 }
-.secondbox{
+
+.secondbox {
     position: relative;
     top: -224px;
     transform: rotateX(335deg);
 }
-.thirdbox{
+
+.thirdbox {
     position: relative;
     top: -443px;
     transform: rotateX(327deg);
 }
-.fourthbox{
+
+.fourthbox {
     position: relative;
     top: -667px;
     transform: rotateX(318deg);
 }
+
+
+/* services section css */
+
+
+.Box {
+    transform-origin: 50% 100%;
+    transform-style: preserve-3d;
+    transition: 0.3s all;
+}
+
+.Boxwhite {
+    background-color: rgb(255, 255, 255);
+}
+
+.Boxgreen {
+    background-color: #d8fced;
+}
+.Boxyellow {
+    background-color: #f3eb0e
+}
+.Boxblue {
+    background-color: #6844e2;
+}
+.Boxpink{
+    background-color: #fe6ae6;
+}
+
+.boxcontainer:hover .Boxyellow {
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(10deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+}
+.boxcontainer:hover .Boxblue {
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(22deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+}
+.boxcontainer:hover .Boxpink {
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(45deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+}
+.boxcontainer:hover .Boxgreen {
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(38deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+}
+.boxcontainer:hover .Boxwhite {
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(45deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+}
+
+
+
+
+/* @keyframes appear {
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+
+}
+
+.videoScroll{
+ animation:  appear  linear;
+ animation-timeline: view();
+ animation-range: entry-0 cover 40%;
+} */
