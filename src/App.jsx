@@ -14,6 +14,9 @@ import TextAnimation from './Components/TextAnimation'
 import TermsandConditions from "./Components/TermsandConditions"
 import PrivacyandPolicy from "./Components/PrivacyandPolicy"
 import Membership_section from './Components/Membership_section'
+import BookCall from './Components/BookCall'
+import Trusted_section from './Components/Trusted_section'
+
 
 
 
@@ -44,7 +47,8 @@ function App() {
           <HomeVideo6 />
           <ServicesSection/>
           <Membership_section/>
-
+          <BookCall/>
+          <Trusted_section/>
         </div>
         <Footer />
       </>)

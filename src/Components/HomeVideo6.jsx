@@ -3,7 +3,7 @@ import React from 'react'
 const HomeVideo6 = () => {
   return (
     <div className=''>
-      <video src="https://assets-global.website-files.com/646c6ec121d9bb039374fb89/64f5ecf650f50f66f7c5a113_Samsung%20V2-transcode.mp4" autoPlay loop muted></video>
+      <video className='w-full' src="https://assets-global.website-files.com/646c6ec121d9bb039374fb89/64f5ecf650f50f66f7c5a113_Samsung%20V2-transcode.mp4" autoPlay loop muted></video>
     </div>
   )
 }

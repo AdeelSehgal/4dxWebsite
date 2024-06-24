@@ -1,6 +1,7 @@
 import { document } from 'postcss'
 import React, { useState } from 'react'
 import { useRef, useEffect } from 'react'
+import Game2 from "./Game2"
 
 
 const TiredofTheseIssues = () => {
@@ -35,13 +36,17 @@ const TiredofTheseIssues = () => {
     }
 
     return (
-        <div className='pt-20 h-screen rounded-b-[50px] bg-white pb-5 '>
+        <div className='pt-20 rounded-b-[50px] bg-white pb-5 '>
             <h3 className='text-center font-semibold text-[55px]'>Tired of these issues</h3>
             <div className='flex justify-evenly text-[17px] items-center bg-[#f9f9f9] w-[60%] font-medium mx-auto h-20 rounded-xl my-10'>
                 <div ref={AgencyRef} onClick={agencyColor} className=' w-1/4 bg-[#ebb7f5] rounded-xl text-center p-3'>Agency</div>
                 <div ref={DesignerRef} onClick={designerColor} className='w-1/4  rounded-xl text-center p-3'>In-House Designer</div>
                 <div ref={freelanceRef} onClick={freelanceColor} className='w-1/4  rounded-xl text-center p-3 ' >Freelancer</div>
             </div>
+            <div className='w-[60%] mx-auto'>
+                <Game2/>
+            </div>
+            
         </div>
     )
 }
