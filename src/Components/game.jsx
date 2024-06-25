@@ -63,7 +63,7 @@ const PhysicsBars = () => {
   }, []);
 
   return (
-    <div className=" h-screen">
+    <div className=" h-screen ">
       <div ref={sceneRef} className="w-full h-full"></div>
     </div>
   );

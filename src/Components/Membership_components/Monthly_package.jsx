@@ -3,7 +3,7 @@ import React from 'react'
 const Monthly_package = () => {
     return (
         <div className='flex justify-center items-center mt-7'>
-            <div className='w-[27%] mx-4 py-7 px-10 my-5 rounded-xl border border-zinc-300 hover:-translate-y-5 duration-150 transition-all'>
+            <div className='w-[27%] mx-4 py-7 px-10  rounded-xl border border-zinc-300 hover:-translate-y-5 duration-150 transition-all'>
                 <h2 className='text-3xl font-semibold'>Design</h2>
                 <p className='text-zinc-500 '>Made for your day-to-day design needs</p>
                 <div className='text-3xl mt-5 '>  $4,999<span className='text-sm text-zinc-500'>+ tax /mo</span>
@@ -11,7 +11,7 @@ const Monthly_package = () => {
 
                 <div className='text-zinc-500 '>Paid monthly</div>
 
-                <button className=' w-[100%] py-4  my-5 bg-[#c9ff00] rounded-xl flex justify-center gap-x-3 items-center'>
+                <button className=' w-[100%] py-4  my-5 bg-[#c9ff00]  rounded-xl flex justify-center gap-x-3 items-center'>
                     <div className='font-semibold text-lg '>Start Today </div>
                     <img className='mt-1' src="https://cdn.prod.website-files.com/646c6ec121d9bb039374fb89/64d5d79abf8d81d90a15c762_Vector.svg" alt="" /></button>
                 <div>
@@ -30,8 +30,8 @@ const Monthly_package = () => {
 
             {/* Design + Dev */}
 
-            <div className='w-[27%] mx-4 py-7 bg-[#f7f7f8] px-10 mt-5 rounded-xl border border-zinc-300 hover:-translate-y-5 duration-150 transition-all'>
-                <div className="banner bg-[#c9ff00]  p-2 w-fit font-semibold text-[12px] rounded-lg relative -top-11 -right-20">Most popular</div>
+            <div className='w-[27%] mx-4 py-7 bg-[#f7f7f8] px-10  rounded-xl border border-zinc-300 hover:-translate-y-5 duration-150 transition-all relative'>
+                <div className="banner bg-[#c9ff00]  p-2 w-fit font-semibold text-[12px] rounded-lg absolute -top-5 right-32">Most popular</div>
                 <h2 className='text-3xl font-semibold'>Design + Dev</h2>
                 <p className='text-zinc-500 '>A turnkey design and development solution</p>
                 <div className='text-3xl mt-5 '>  $7,999<span className='text-sm text-zinc-500'>+ tax /mo</span>
@@ -56,7 +56,7 @@ const Monthly_package = () => {
 
                 {/* Design + Creative */}
             </div>
-            <div className='w-[27%] mx-4 py-7 bg-black px-10 mt-5 rounded-xl border border-zinc-300 hover:-translate-y-5 duration-150 transition-all'>
+            <div className='w-[27%] mx-4 py-7 bg-black px-10  rounded-xl border border-zinc-300 hover:-translate-y-5 duration-150 transition-all'>
                 <h2 className='text-3xl text-white font-semibold'>Design + Creative</h2>
                 <p className='text-zinc-500 '>A turnkey marketing and design solution for creative needs</p>
                 <div className='text-3xl mt-5 text-white '>  $7,999<span className='text-sm text-zinc-500'>+ tax /mo</span>

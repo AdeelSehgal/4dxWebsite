@@ -16,7 +16,10 @@ import PrivacyandPolicy from "./Components/PrivacyandPolicy"
 import Membership_section from './Components/Membership_section'
 import BookCall from './Components/BookCall'
 import Trusted_section from './Components/Trusted_section'
-
+import Contact from "./Components/Contact"
+import Logos_section from './Components/Logos_section'
+import Getstarted from './Components/Getstarted'
+import Subscribe from './Components/Subscribe'
 
 
 
@@ -30,6 +33,10 @@ function App() {
     {
       path: "/PrivacyandPolicy",
       element: <><Navbar /> <PrivacyandPolicy /> <Footer /> </>
+    },
+    {
+      path: "/Contact",
+      element: <><Navbar /> <Contact /> <Footer /> </>
     },
 
     {
@@ -46,9 +53,12 @@ function App() {
           <HomeVideo5 />
           <HomeVideo6 />
           <ServicesSection/>
+          <Subscribe/>
           <Membership_section/>
           <BookCall/>
           <Trusted_section/>
+          <Logos_section/>
+          <Getstarted/>
         </div>
         <Footer />
       </>)

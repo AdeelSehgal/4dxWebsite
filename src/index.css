@@ -79,36 +79,54 @@
 .Boxgreen {
     background-color: #d8fced;
 }
+
 .Boxyellow {
     background-color: #f3eb0e
 }
+
 .Boxblue {
     background-color: #6844e2;
 }
-.Boxpink{
+
+.Boxpink {
     background-color: #fe6ae6;
 }
 
 .boxcontainer:hover .Boxyellow {
-    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(10deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(-10deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
     transform-style: preserve-3d;
+    
 }
+
 .boxcontainer:hover .Boxblue {
-    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(22deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(-22deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
     transform-style: preserve-3d;
+    
 }
+
 .boxcontainer:hover .Boxpink {
-    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(45deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(-30deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
     transform-style: preserve-3d;
+    transition-duration: 300ms;
 }
+
 .boxcontainer:hover .Boxgreen {
-    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(38deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(-38deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
     transform-style: preserve-3d;
 }
+
 .boxcontainer:hover .Boxwhite {
-    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(45deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(-45deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
     transform-style: preserve-3d;
+    transition-duration: 300ms;
 }
+
+
+.boxcontainer{
+    perspective: 2000px;
+    perspective-origin: 50% 0;
+}
+
 
 
 

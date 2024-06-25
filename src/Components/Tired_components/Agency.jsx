@@ -3,24 +3,26 @@ import Matter from 'matter-js';
 
 const PhysicsBars = () => {
   const sceneRef = useRef(null);
+  const engineRef = useRef(Matter.Engine.create());
+  const renderRef = useRef(null);
 
   useEffect(() => {
     const Engine = Matter.Engine,
-          Render = Matter.Render,
-          World = Matter.World,
-          Bodies = Matter.Bodies,
-          Mouse = Matter.Mouse,
-          MouseConstraint = Matter.MouseConstraint;
+      Render = Matter.Render,
+      World = Matter.World,
+      Bodies = Matter.Bodies,
+      Mouse = Matter.Mouse,
+      MouseConstraint = Matter.MouseConstraint;
 
-    const engine = Engine.create();
+    const engine = engineRef.current;
     const world = engine.world;
 
-    const render = Render.create({
+    renderRef.current = Render.create({
       element: sceneRef.current,
       engine: engine,
       options: {
         width: 800,
-        height: 600,
+        height: 420,
         wireframes: false,
         background: '#FEFDFD'
       }
@@ -29,9 +31,9 @@ const PhysicsBars = () => {
     // Create static boundaries with transparent borders
     const boundaries = [
       Bodies.rectangle(400, -30, 810, 60, { isStatic: true, render: { visible: false } }),   // top
-      Bodies.rectangle(400, 630, 810, 60, { isStatic: true, render: { visible: false } }), // bottom
-      Bodies.rectangle(830, 300, 60, 600, { isStatic: true, render: { visible: false } }), // right
-      Bodies.rectangle(-30, 300, 60, 600, { isStatic: true, render: { visible: false } })    // left
+      Bodies.rectangle(400, 450, 810, 60, { isStatic: true, render: { visible: false } }), // bottom
+      Bodies.rectangle(830, 210, 60, 420, { isStatic: true, render: { visible: false } }), // right
+      Bodies.rectangle(-30, 210, 60, 420, { isStatic: true, render: { visible: false } })    // left
     ];
     World.add(world, boundaries);
 
@@ -45,7 +47,7 @@ const PhysicsBars = () => {
 
     texts.forEach((text, index) => {
       // Calculate the width based on text length
-      const width = text.length * 8 ; // Adjust multiplier and additional width as needed
+      const width = text.length * 8; // Adjust multiplier and additional width as needed
       const box = Bodies.rectangle(100 + index * 70, 100 + index * 30, width, 40, {
         restitution: 0.5,
         chamfer: { radius: 20 }, // Making boxes rounded
@@ -58,7 +60,7 @@ const PhysicsBars = () => {
 
     World.add(world, boxes);
 
-    const mouse = Mouse.create(render.canvas);
+    const mouse = Mouse.create(renderRef.current.canvas);
     const mouseConstraint = MouseConstraint.create(engine, {
       mouse: mouse,
       constraint: {
@@ -71,14 +73,11 @@ const PhysicsBars = () => {
 
     World.add(world, mouseConstraint);
 
-    render.mouse = mouse;
-
-    Engine.run(engine);
-    Render.run(render);
+    renderRef.current.mouse = mouse;
 
     // Custom rendering to draw text on the boxes
-    Matter.Events.on(render, 'afterRender', function() {
-      const context = render.context;
+    Matter.Events.on(renderRef.current, 'afterRender', function () {
+      const context = renderRef.current.context;
       context.font = '14px Arial';
       context.fillStyle = '#000000';
       context.textAlign = 'center';
@@ -95,18 +94,53 @@ const PhysicsBars = () => {
       });
     });
 
+    // Handle scrolling while interacting with Matter.js canvas
+    const handleScroll = (event) => {
+      if (event.target === renderRef.current.canvas) {
+        window.scrollBy(0, event.deltaY);
+      }
+    };
+
+    window.addEventListener('wheel', handleScroll);
+
+    // Intersection Observer to start engine when canvas is in view
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            Engine.run(engine);
+            Render.run(renderRef.current);
+          }
+        });
+      },
+      {
+        root: null,
+        threshold: 0.1
+      }
+    );
+
+    if (sceneRef.current) {
+      observer.observe(sceneRef.current);
+    }
+
     return () => {
       World.clear(world);
       Engine.clear(engine);
-      Render.stop(render);
-      render.canvas.remove();
-      render.textures = {};
+      Render.stop(renderRef.current);
+      renderRef.current.canvas.remove();
+      renderRef.current.textures = {};
+
+      window.removeEventListener('wheel', handleScroll);
+
+      if (sceneRef.current) {
+        observer.unobserve(sceneRef.current);
+      }
     };
   }, []);
 
   return (
-    <div className="flex justify-center items-center h-screen">
-      <div ref={sceneRef} className="w-full h-full"></div>
+    <div className="flex justify-center items-center ">
+      <div ref={sceneRef} className="w-full h-[420px]"></div>
     </div>
   );
 };

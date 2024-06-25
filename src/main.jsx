@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-// import App from './Components/game.jsx'
+// import App from './Components/Videocarousel'
 import App from './App.jsx'
 import './index.css'
 
