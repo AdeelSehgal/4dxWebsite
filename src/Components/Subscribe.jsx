@@ -3,7 +3,7 @@ import React from 'react'
 const Subscribe = () => {
     return (
         <div>
-            <div className='flex justify-around items-center py-10  bg-zinc-50'>
+            <div className='flex justify-around items-center py-10  bg-[#fff]'>
                 <div className=' text-[55px] font-semibold w-[30%] sticky top-0'>
                     <h3 className=''>How it</h3>
                     <div className='text-zinc-500 membership '> works</div>

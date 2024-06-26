@@ -11,8 +11,8 @@ const Membership_section = () => {
     const YearlyRef = useRef()
     const MonthlyRef = useRef()
     const QuaterlyRef = useRef()
-    const [component, setComponent] = useState(<Monthly_package/>);
-    
+    const [component, setComponent] = useState(<Monthly_package />);
+
 
     const QuaterlyColor = () => {
         if (active == "Monthly" || active == "Yearly")
@@ -23,7 +23,7 @@ const Membership_section = () => {
         QuaterlyRef.current.style.backgroundColor = "#ebb7f5"
         QuaterlyRef.current.style.color = "black"
         setActive("Quaterly")
-        setComponent(<Quater_package/>)
+        setComponent(<Quater_package />)
     }
 
 
@@ -36,7 +36,7 @@ const Membership_section = () => {
         QuaterlyRef.current.style.backgroundColor = "rgb(244 244 245)"
         QuaterlyRef.current.style.color = "#726F6F"
         setActive("Yearly")
-        setComponent(<Yearly_package/>)
+        setComponent(<Yearly_package />)
     }
 
     const MonthlyColor = () => {
@@ -48,18 +48,18 @@ const Membership_section = () => {
         QuaterlyRef.current.style.backgroundColor = "rgb(244 244 245)"
         QuaterlyRef.current.style.color = "#726F6F"
         setActive("Monthly")
-        setComponent(<Monthly_package/>)
+        setComponent(<Monthly_package />)
     }
 
 
     return (
-        <div className='bg-zinc-50 py-10'>
-            <div className='flex justify-between px-14 items-center mb-5'>
+        <div className='bg-[#fff] py-10'>
+            <div className='lg:flex justify-between px-14 items-center mb-5'>
                 <div className='w-[68%] text-[55px] font-semibold'>
                     <h3 className='membership'>Membership</h3>
-                    <div className='text-zinc-500 '> plan</div>
+                    <div className='text-zinc-500 ml-3 '> plan</div>
                 </div>
-                <div className='w-[32%]  text-zinc-500 '>
+                <div className=' lg:w-[32%] my-4 text-zinc-500 '>
                     <div className='mb-5'>
                         <p>Simple and straight-forward pricing.</p>
                         <strong>No fluff, No hidden charges.</strong>
@@ -76,7 +76,7 @@ const Membership_section = () => {
             <div >
                 {component}
             </div>
-            
+
         </div>
     )
 }

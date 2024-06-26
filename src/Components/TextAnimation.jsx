@@ -17,7 +17,7 @@ const TextAnimation = () => {
     }, [])
 
     return (
-        <div>
+        <div className='w-[100%] bg-orange-500'>
             <Lottie animationData={Text} lottieRef={LottieRef} />
         </div>
     )

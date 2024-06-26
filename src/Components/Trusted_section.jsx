@@ -42,7 +42,7 @@ const Trusted_section = () => {
     };
 
     return (
-        <div className='bg-zinc-50 py-10'>
+        <div className='bg-[#fff] py-10 border border-orange-400 w-full h-[180vh] '>
             <div className='text-[55px] font-semibold p-14  '>
                 <h3 className=''>Trusted by 100+</h3>
                 <div className='text-zinc-500 membership '> ambitious companies</div>

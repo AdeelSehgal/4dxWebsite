@@ -17,12 +17,37 @@ const PhysicsBars = () => {
     const engine = engineRef.current;
     const world = engine.world;
 
+    const resizeCanvas = () => {
+      const width = sceneRef.current.clientWidth;
+      const height = sceneRef.current.clientHeight;
+
+      if (renderRef.current) {
+        renderRef.current.bounds.max.x = width;
+        renderRef.current.bounds.max.y = height;
+        renderRef.current.options.width = width;
+        renderRef.current.options.height = height;
+        renderRef.current.canvas.width = width;
+        renderRef.current.canvas.height = height;
+
+        // Update boundaries
+        Matter.Body.setPosition(boundaries[0], { x: width / 2, y: -30 }); // top
+        Matter.Body.setPosition(boundaries[1], { x: width / 2, y: height + 30 }); // bottom
+        Matter.Body.setPosition(boundaries[2], { x: width + 30, y: height / 2 }); // right
+        Matter.Body.setPosition(boundaries[3], { x: -30, y: height / 2 }); // left
+
+        Matter.Body.setVertices(boundaries[0], Matter.Vertices.fromPath(`L 0 0 L ${width} 0 L ${width} 60 L 0 60`)); // top
+        Matter.Body.setVertices(boundaries[1], Matter.Vertices.fromPath(`L 0 0 L ${width} 0 L ${width} 60 L 0 60`)); // bottom
+        Matter.Body.setVertices(boundaries[2], Matter.Vertices.fromPath(`L 0 0 L 60 0 L 60 ${height} L 0 ${height}`)); // right
+        Matter.Body.setVertices(boundaries[3], Matter.Vertices.fromPath(`L 0 0 L 60 0 L 60 ${height} L 0 ${height}`)); // left
+      }
+    };
+
     renderRef.current = Render.create({
       element: sceneRef.current,
       engine: engine,
       options: {
-        width: 800,
-        height: 420,
+        width: sceneRef.current.clientWidth,
+        height: sceneRef.current.clientHeight,
         wireframes: false,
         background: '#FEFDFD'
       }
@@ -30,26 +55,26 @@ const PhysicsBars = () => {
 
     // Create static boundaries with transparent borders
     const boundaries = [
-      Bodies.rectangle(400, -30, 810, 60, { isStatic: true, render: { visible: false } }),   // top
-      Bodies.rectangle(400, 450, 810, 60, { isStatic: true, render: { visible: false } }), // bottom
-      Bodies.rectangle(830, 210, 60, 420, { isStatic: true, render: { visible: false } }), // right
-      Bodies.rectangle(-30, 210, 60, 420, { isStatic: true, render: { visible: false } })    // left
+      Bodies.rectangle(sceneRef.current.clientWidth / 2, -30, sceneRef.current.clientWidth + 60, 60, { isStatic: true, render: { visible: false } }), // top
+      Bodies.rectangle(sceneRef.current.clientWidth / 2, sceneRef.current.clientHeight + 30, sceneRef.current.clientWidth + 60, 60, { isStatic: true, render: { visible: false } }), // bottom
+      Bodies.rectangle(sceneRef.current.clientWidth + 30, sceneRef.current.clientHeight / 2, 60, sceneRef.current.clientHeight + 60, { isStatic: true, render: { visible: false } }), // right
+      Bodies.rectangle(-30, sceneRef.current.clientHeight / 2, 60, sceneRef.current.clientHeight + 60, { isStatic: true, render: { visible: false } }) // left
     ];
     World.add(world, boundaries);
 
-    // Create 6 boxes
+    // Create 9 boxes
     const boxes = [];
     const texts = [
-      'No Scalable', 'Limited Availibility', 'Slow Delivery',
-      'Poor System and Processes', 'Limited Skill Set', 'Require Micromanagment','Limited Resources'
+      'Poor System and Processes', 'Not Scalable', 'Limited Resources',
+      'Slow Delivery', 'Require Micromanagment', 'Limited Skill Set',
+      'Limited Availibility'
     ];
 
     texts.forEach((text, index) => {
-      // Calculate the width based on text length
-      const width = text.length * 8; // Adjust multiplier and additional width as needed
+      const width = text.length * 8;
       const box = Bodies.rectangle(100 + index * 70, 100 + index * 30, width, 40, {
         restitution: 0.5,
-        chamfer: { radius: 20 }, // Making boxes rounded
+        chamfer: { radius: 20 },
         render: {
           fillStyle: ['#FF7700', '#c9ff00', '#45F919', '#144FF8', '#C9D3EE', '#AD1CFF'][index % 6]
         }
@@ -74,7 +99,6 @@ const PhysicsBars = () => {
 
     renderRef.current.mouse = mouse;
 
-    // Custom rendering to draw text on the boxes
     Matter.Events.on(renderRef.current, 'afterRender', function () {
       const context = renderRef.current.context;
       context.font = '14px Arial';
@@ -88,12 +112,11 @@ const PhysicsBars = () => {
         context.save();
         context.translate(x, y);
         context.rotate(angle);
-        context.fillText(texts[index], 0, 6); // Adjusted y position to better center the text
+        context.fillText(texts[index], 0, 6);
         context.restore();
       });
     });
 
-    // Handle scrolling while interacting with Matter.js canvas
     const handleScroll = (event) => {
       if (event.target === renderRef.current.canvas) {
         window.scrollBy(0, event.deltaY);
@@ -102,7 +125,6 @@ const PhysicsBars = () => {
 
     window.addEventListener('wheel', handleScroll);
 
-    // Intersection Observer to start engine when canvas is in view
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -122,6 +144,8 @@ const PhysicsBars = () => {
       observer.observe(sceneRef.current);
     }
 
+    window.addEventListener('resize', resizeCanvas);
+
     return () => {
       World.clear(world);
       Engine.clear(engine);
@@ -130,6 +154,7 @@ const PhysicsBars = () => {
       renderRef.current.textures = {};
 
       window.removeEventListener('wheel', handleScroll);
+      window.removeEventListener('resize', resizeCanvas);
 
       if (sceneRef.current) {
         observer.unobserve(sceneRef.current);
@@ -138,8 +163,8 @@ const PhysicsBars = () => {
   }, []);
 
   return (
-    <div className="flex justify-center items-center ">
-      <div ref={sceneRef} className="w-full h-[420px]"></div>
+    <div className="flex justify-center items-center w-full h-[420px]">
+      <div ref={sceneRef} className="w-full h-full"></div>
     </div>
   );
 };

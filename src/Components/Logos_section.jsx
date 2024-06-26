@@ -28,7 +28,7 @@ const Logos_section = () => {
         }
 
         if (logo2) {
-            gsap.fromTo(logo2, { x: 1350 },
+            gsap.fromTo(logo2, { x: 950 },
                 {
                     x:-500, 
                     delay:1,
@@ -44,10 +44,10 @@ const Logos_section = () => {
     }, []);
 
     return (
-        <div className="overflow-hidden bg-zinc-50 py-10 pb-10 flex-col items-center  "> {/* Ensures no horizontal scroll */}
+        <div className="overflow-hidden bg-[#fff] py-10 pb-10 flex-col items-center  "> {/* Ensures no horizontal scroll */}
             <div className='flex justify-center items-center mt-10' ref={logoRef1}>
                 <div className='w-[15%]'>
-                    <img className='w-[80%] ' src="https://cdn.prod.website-files.com/646c6ec121d9bb039374fb89/64ec8dce4e4910fb575c9b86_Group%201299.svg" alt="" />
+                    <img className='w-[80%] mix-blend-multiply ' src="https://cdn.prod.website-files.com/646c6ec121d9bb039374fb89/64ec8dce4e4910fb575c9b86_Group%201299.svg" alt="" />
                 </div>
                 <div className='w-[15%]'>
                     <img className='w-[80%]' src="https://cdn.prod.website-files.com/646c6ec121d9bb039374fb89/64ec8dd412bf5ac6414e598d_Group%201299%20(1).svg" alt="" />

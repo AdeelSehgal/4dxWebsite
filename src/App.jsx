@@ -20,6 +20,7 @@ import Contact from "./Components/Contact"
 import Logos_section from './Components/Logos_section'
 import Getstarted from './Components/Getstarted'
 import Subscribe from './Components/Subscribe'
+import Videocarousel from './Components/Videocarousel'
 
 
 
@@ -53,6 +54,7 @@ function App() {
           <HomeVideo5 />
           <HomeVideo6 />
           <ServicesSection/>
+          <Videocarousel/>
           <Subscribe/>
           <Membership_section/>
           <BookCall/>

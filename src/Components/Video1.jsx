@@ -18,7 +18,7 @@ const Video1 = () => {
             trigger: videoElement,
             start: "top bottom", // When the top of the video hits the bottom of the viewport
             end: "top center", // When the top of the video hits the top of the viewport
-            scrub: true, // Smooth scrubbing
+            scrub: 2, // Smooth scrubbing
             markers: false, // Remove or set to false to hide markers
           },
         }
@@ -27,10 +27,10 @@ const Video1 = () => {
   }, []);
 
   return (
-    <div className='z-[2] bg-white'>
-      <div className='mx-auto'>
-        <video 
-          className='' 
+    <div className='z-[2] bg-[#fff]'>
+      <div className='mx-auto w-full '>
+        <video  
+          className='w-full' 
           ref={videoRef} 
           src="https://cdn.prod.website-files.com/646c6ec121d9bb039374fb89/64eef4314bb9724aac6c50d1_Hero%20Video-transcode.mp4" 
           muted 

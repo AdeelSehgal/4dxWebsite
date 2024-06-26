@@ -3,7 +3,7 @@ import Box from './Service_section_component/Box'
 
 const ServicesSection = () => {
     return (
-        <div className='bg-white pb-14 '>
+        <div className='bg-[#fff] pb-14 pt-28 '>
             <div className='bg-zinc-50 text-black py-10 pb-24  rounded-b-[50px] '>
                 <div className='flex justify-between px-16 items-center mb-5 '>
                     <div className='w-[68%] text-[50px] font-semibold'>

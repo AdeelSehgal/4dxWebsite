@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
-        <div className='bg-black  fixed bottom-0 z-[1] left-0 right-0 h-screen'>
+        <div className='bg-black w-[100vw] fixed bottom-0 z-[1] left-0 right-0 h-screen'>
             <div className='flex items-center justify-evenly py-4 pt-[130px] '>
                 <div className="first text-zinc-400 w-[20%] ">
                     <div className="logo my-5 mt-14 cursor-pointer">
