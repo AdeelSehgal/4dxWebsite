@@ -2,7 +2,7 @@ import React from 'react'
 
 const Box = (props) => {
   return (
-    <div className='w-[43%]'>
+    <div className=' px-5 md:w-[37rem] w-[90%] mx-auto'>
          <div className=' relative  boxcontainer my-5  '>
                 <div className='h-60  rounded-xl relative Box Boxwhite z-[5] shadow-2xl '>
                     <div className='flex justify-between items-center px-10 h-60 '>

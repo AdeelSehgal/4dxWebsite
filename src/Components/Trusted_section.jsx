@@ -42,14 +42,14 @@ const Trusted_section = () => {
     };
 
     return (
-        <div className='bg-[#fff] py-10 border border-orange-400 w-full h-[180vh] '>
+        <div className='bg-[#fff] py-10  w-full h-[130vh] lg:h-[130vh] '>
             <div className='text-[55px] font-semibold p-14  '>
                 <h3 className=''>Trusted by 100+</h3>
                 <div className='text-zinc-500 membership '> ambitious companies</div>
             </div>
-            <div className="flex items-center justify-between  px-14 my-5 gap-x-10 ">
+            <div className="flex items-center justify-between  px-5  my-5 gap-x-5 ">
                 <button
-                    className="group px-8 py-[34px] rounded-full border border-zinc-400 flex items-center justify-center hover:scale-125 hover:bg-black transition duration-200"
+                    className="group md:px-8 md:py-[34px] px-5 py-[22px]  rounded-full border border-zinc-400 flex items-center justify-center hover:scale-125 hover:bg-black transition duration-200"
                     onClick={handlePrevious}
                 >
                     <div className="arrow-embed w-5">
@@ -59,7 +59,7 @@ const Trusted_section = () => {
                     </div>
                 </button>
                 <div className="w-[80%] h-64  ">
-                    <p className="text-[33px] ">{slides[currentIndex].content}</p>
+                    <p className="text-[3vw] ">{slides[currentIndex].content}</p>
                     <div className="flex items-center  mt-10">
                         <img src={slides[currentIndex].image} alt={slides[currentIndex].author} className="w-20 h-20 rounded-full mr-3" />
                         <div className="text-left">
@@ -69,14 +69,13 @@ const Trusted_section = () => {
                     </div>
                 </div>
                 <button
-                    className=" group px-8 py-[34px] border border-zinc-400 flex items-center justify-center rounded-full hover:scale-125 hover:bg-black duration-200 transition-all"
+                    className=" group md:px-8 md:py-[34px] px-5 py-[22px]  border border-zinc-400 flex items-center justify-center rounded-full hover:scale-125 hover:bg-black duration-200 transition-all"
                     onClick={handleNext}
                 >
                     <div class="arrow-embed w-embed w-5">
                         <svg width="100%" height="100%" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path className="group-hover:stroke-white" d="M11.7601 1L17.8301 7.07M17.8301 7.07L11.7601 13.14M17.8301 7.07H8.51008M1.00008 7.07H4.48008" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
                         </svg></div>
-
                 </button>
             </div>
 

@@ -1,12 +1,23 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import HambergerMene from './HambergerMene';
 
 const Navbar = () => {
 
+    const [menu, setmenu] = useState(null)
 
     const logoRef = useRef();
     const BookRef = useRef();
     const SignRef = useRef();
+
+    const menuVisible = () => {
+        if(menu==null){
+            setmenu(<HambergerMene/>)
+        }
+        else{
+            setmenu(null)
+        }
+    };
 
     useEffect(() => {
         const addMagneticEffect = (button) => {
@@ -42,31 +53,51 @@ const Navbar = () => {
         addMagneticEffect(logoRef.current);
         addMagneticEffect(BookRef.current);
         addMagneticEffect(SignRef.current);
+
     }, []);
 
 
     return (
-        <div className='w-[95%] bg-black text-white my-3 flex justify-between items-center h-20 mx-auto rounded-xl px-16  absolute z-[3] left-0 right-0  '>
-            <Link to={"/"}>
-            <div className='cursor-pointer '>
-                <img ref={logoRef} src="https://cdn.prod.website-files.com/646c6ec121d9bb039374fb89/6512a6905ed7ebbc2cd9f781_Group%2010100.svg" alt="" />
-            </div> </Link>
-            <div className='ml-5'>
-                <div className='flex  items-baseline gap-4 justify-center'>
-                    <div className="font-semibold text-sm hover:bg-[#c9ff00] hover:text-black px-3 p-1 cursor-pointer py-2 rounded-lg ">Solutions</div>
-                    <div className=' bg-[#c9ff00] w-[6px] h-[6px] rounded-full'></div>
-                    <div className="font-semibold text-sm hover:bg-[#c9ff00] hover:text-black px-3 p-1 cursor-pointer py-2 rounded-lg ">Work</div>
-                    <div className=' bg-[#c9ff00] w-[6px] h-[6px] rounded-full'></div>
-                    <div className="font-semibold text-sm hover:bg-[#c9ff00] hover:text-black px-3 p-1 cursor-pointer py-2 rounded-lg ">Pricing</div>
-                    <div className=' bg-[#c9ff00] w-[6px] h-[6px] rounded-full'></div>
-                    <div className="font-semibold text-sm hover:bg-[#c9ff00] hover:text-black px-3 p-1 cursor-pointer py-2 rounded-lg ">Blog</div>
+        <div className='absolute z-[3] left-0 right-0 '>
+            <div className='w-[95%] bg-black text-white mt-3 flex justify-between items-center h-20 mx-auto  rounded-xl    px-16 '>
+                <Link to={"/"}>
+                    <div className='cursor-pointer '>
+                        <img ref={logoRef} src="https://cdn.prod.website-files.com/646c6ec121d9bb039374fb89/6512a6905ed7ebbc2cd9f781_Group%2010100.svg" alt="" />
+                    </div>
+                </Link>
+                <div className='ml-5 hidden lg:block'>
+                    <div className='flex  items-baseline gap-4 justify-center'>
+                        <div className="font-semibold text-sm hover:bg-[#c9ff00] hover:text-black px-3 p-1 cursor-pointer py-2 rounded-lg ">Solutions</div>
+                        <div className=' bg-[#c9ff00] w-[6px] h-[6px] rounded-full'></div>
+                        <div className="font-semibold text-sm hover:bg-[#c9ff00] hover:text-black px-3 p-1 cursor-pointer py-2 rounded-lg ">Work</div>
+                        <div className=' bg-[#c9ff00] w-[6px] h-[6px] rounded-full'></div>
+                        <div className="font-semibold text-sm hover:bg-[#c9ff00] hover:text-black px-3 p-1 cursor-pointer py-2 rounded-lg ">Pricing</div>
+                        <div className=' bg-[#c9ff00] w-[6px] h-[6px] rounded-full'></div>
+                        <div className="font-semibold text-sm hover:bg-[#c9ff00] hover:text-black px-3 p-1 cursor-pointer py-2 rounded-lg ">Blog</div>
+                    </div>
                 </div>
-            </div>
-            <div className='flex justify-center items-center gap-12'> 
-                <Link to={"/Contact"}><button ref={BookRef} className='w-full mx-10 text-sm font-semibold'>Book a call</button></Link>
-                <button ref={SignRef} className=' w-full px-5 py-4 font-semibold text-sm border border-white rounded-xl'>Sign up</button>
-            </div>
+                <div className=' justify-center items-center  '>
+                    <div className=' flex lg:hidden '  onClick={menuVisible}>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 256 256" width="30px" height="30px">
+                            <g fill="#f8f8f8" fillRule="nonzero" stroke="none" strokeWidth="1" strokeLinecap="butt" strokeLinejoin="miter" strokeMiterlimit="10" fontFamily="none" fontWeight="none" fontSize="none" textAnchor="none" style={{ mixBlendMode: 'normal' }}>
+                                <g transform="scale(5.12,5.12)">
+                                    <path d="M0,7.5v5h50v-5zM0,22.5v5h50v-5zM0,37.5v5h50v-5z"></path>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <div className='lg:flex hidden  justify-center items-center  gap-10 '>
+                        <Link to={"/Contact"} className='w-fit]'>
+                            <button ref={BookRef} className='   text-sm font-semibold'>Book a call</button>
+                        </Link>
+                        <button ref={SignRef} className=' w-[9rem] py-4 font-semibold text-sm border border-white rounded-xl'>Sign up</button>
+                    </div>
+                </div>
 
+            </div>
+            <div className=''>
+                {menu}
+            </div>
         </div>
     )
 }

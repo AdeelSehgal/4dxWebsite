@@ -1,10 +1,10 @@
 import React from 'react'
-import Text from "./Assets/LotteAnimation.json"
+import Animation from "./Assets/Loader.json"
 import Lottie from "lottie-react"
 import { useRef, useEffect, useState } from 'react'
 
 const TextAnimation = () => {
-    const [speed, setSpeed] = useState(0.5)
+    const [speed, setSpeed] = useState(0.3)
 
     const LottieRef = useRef(null)
 
@@ -17,8 +17,10 @@ const TextAnimation = () => {
     }, [])
 
     return (
-        <div className='w-[100%]'>
-            <Lottie animationData={Text} lottieRef={LottieRef} />
+        <div className='h-screen w-screen flex items-center justify-center'>
+            <div className='max-h-full max-w-full overflow-hidden'>
+                <Lottie animationData={Animation} lottieRef={LottieRef} className='h-full w-full' />
+            </div>
         </div>
     )
 }

@@ -8,10 +8,10 @@ const Video1 = () => {
 
   useEffect(() => {
     const videoElement = videoRef.current;
-    
+
     if (videoElement) {
-      gsap.fromTo(videoElement, 
-        { scale: 0.5 }, // Start from 0.5 times the original size
+      gsap.fromTo(videoElement,
+        { scale: 0.6 }, // Start from 0.6 times the original size
         {
           scale: 1, // End at the original size
           scrollTrigger: {
@@ -27,16 +27,10 @@ const Video1 = () => {
   }, []);
 
   return (
-    <div className='z-[2] bg-[#fff]'>
-      <div className='mx-auto w-full '>
-        <video  
-          className='w-full' 
-          ref={videoRef} 
-          src="https://cdn.prod.website-files.com/646c6ec121d9bb039374fb89/64eef4314bb9724aac6c50d1_Hero%20Video-transcode.mp4" 
-          muted 
-          autoPlay 
-          loop 
-        />
+    <div className='z-[2] bg-[#fff] h-screen w-screen'>
+      <div className='h-full w-full'>
+        <video
+          className='object-fill w-full h-full' ref={videoRef} src="https://cdn.prod.website-files.com/646c6ec121d9bb039374fb89/64eef4314bb9724aac6c50d1_Hero%20Video-transcode.mp4" muted autoPlay loop />
       </div>
     </div>
   );

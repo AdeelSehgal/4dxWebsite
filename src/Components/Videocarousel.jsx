@@ -60,7 +60,7 @@ const Videocarousel = () => {
 
   return (
     <div className='overflow-hidden bg-[#fff]'>
-      <div className='flex justify-center items-center bg-slate-900 space-x-7 overflow-hidden min-w-[130vw] relative -left-52 h-[100vh] my-10'>
+      <div className='flex justify-center items-center bg-slate-900 space-x-7 overflow-hidden lg:min-w-[130vw] min-w-[150vw] relative -left-52 lg:h-[100vh] h-[70vh] my-10'>
         <div className=' ' ref={div1Ref}>
           <img className='my-5 ' src="https://cdn.prod.website-files.com/646c6ec121d9bb039374fb89/6500443a0d2257bcb7a8c0fd_Mask%20group-min-p-1080.webp" alt="" />
           <img className='my-5' src="https://cdn.prod.website-files.com/646c6ec121d9bb039374fb89/6500455d0e99b12e4a6f358f_Mask%20group%20(3)-min-p-1080.webp" alt="" />

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Navbar from './Components/Navbar'
 import Video1 from './Components/Video1'
@@ -21,12 +21,40 @@ import Logos_section from './Components/Logos_section'
 import Getstarted from './Components/Getstarted'
 import Subscribe from './Components/Subscribe'
 import Videocarousel from './Components/Videocarousel'
+import Results from './Components/Results'
+import Preloader from './Components/Preloader'
+
 
 
 
 function App() {
 
+
+  const [loading, setLoading] = useState(true);
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setProgress((prevProgress) => {
+        if (prevProgress >= 100) {
+          clearInterval(interval);
+          setLoading(false);
+          return 100;
+        }
+        return prevProgress + 1; // Increment by 10% for demonstration
+      });
+    }, 30); // Adjust the interval time as needed
+
+    return () => clearInterval(interval);
+  }, []);
+
+  if (loading) {
+    return <Preloader progress={progress} />;
+  }
+
   const router = createBrowserRouter([
+
+
     {
       path: "/TermsandConditions",
       element: <><Navbar /> <TermsandConditions /> <Footer /> </>
@@ -53,14 +81,15 @@ function App() {
           <HomeVideo4 />
           <HomeVideo5 />
           <HomeVideo6 />
-          <ServicesSection/>
-          <Videocarousel/>
-          <Subscribe/>
-          <Membership_section/>
-          <BookCall/>
-          <Trusted_section/>
-          <Logos_section/>
-          <Getstarted/>
+          <ServicesSection />
+          <Videocarousel />
+          <Subscribe />
+          <Membership_section />
+          <BookCall />
+          <Trusted_section />
+          <Logos_section />
+          <Results />
+          <Getstarted />
         </div>
         <Footer />
       </>)
@@ -70,7 +99,9 @@ function App() {
 
   return (
     <>
-      <RouterProvider router={router} />
+      
+        <RouterProvider router={router} />
+    
     </>
   )
 }
