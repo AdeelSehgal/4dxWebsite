@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
-        <div className='bg-black w-[100vw] sm:fixed bottom-0 z-[1] left-0 right-0 '>
-            <div className='md:flex md:items-center md:justify-between py-4     px-10 '>
+        <div className='bg-black w-[100vw]  sm:fixed bottom-0 z-[1] left-0 right-0 '>
+            <div className='md:flex md:items-center md:justify-between py-4 pt-[100vh]    px-10 '>
                 <div className="first text-zinc-400 sm:w-[25%]  ">
                     <div className="logo my-5 mt-14 cursor-pointer">
                         <img src="https://cdn.prod.website-files.com/646c6ec121d9bb039374fb89/6512a6905ed7ebbc2cd9f781_Group%2010100.svg" alt="" width={170} />

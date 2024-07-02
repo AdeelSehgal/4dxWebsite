@@ -11,6 +11,6 @@ const Getstarted = () => {
       <div className='font-semibold z-10 w text-center text-[30px] pt-52   '>Let's book a meeting 👋</div>
     </div>
   );
-} 
+}
 
-export default Getstarted;
+export default Getstarted

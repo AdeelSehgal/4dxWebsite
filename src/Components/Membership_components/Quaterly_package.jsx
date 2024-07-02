@@ -81,7 +81,7 @@ const Monthly_package = () => {
 
                 <div className='text-zinc-500 '>Paid monthly</div>
 
-                <button ref={buttonRef2}  className=' w-[100%] py-4  my-5  border-black border-[2px] rounded-xl flex justify-center gap-x-3 items-center'>
+                <button ref={buttonRef2}  className=' w-[100%] py-4  my-5 Devgradientbutton flex justify-center gap-x-3 items-center'>
                     <div className='font-semibold text-lg '>Start Today </div>
                     <img className='mt-1' src="https://cdn.prod.website-files.com/646c6ec121d9bb039374fb89/64d5d79abf8d81d90a15c762_Vector.svg" alt="" /></button>
                 <div>
@@ -108,7 +108,7 @@ const Monthly_package = () => {
 
                 <div className='text-zinc-500 '>Paid monthly</div>
 
-                <button  ref={buttonRef3} className=' w-[100%] py-4  my-5 border-[2px] border-[#c9ff00] rounded-xl flex justify-center gap-x-3 items-center'>
+                <button  ref={buttonRef3} className=' w-[100%] py-4  my-5 Creative-gradientbutton flex justify-center gap-x-3 items-center'>
                     <div className='font-semibold text-lg text-[#c9ff00]'>Start Today </div>
                     <img className='mt-1' src="https://cdn.prod.website-files.com/646c6ec121d9bb039374fb89/64db27fb079bd717a8e5a798_Vector%20(9).svg" alt="" /></button>
                 <div>

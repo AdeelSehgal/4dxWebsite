@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Navbar from './Components/Navbar'
 import Video1 from './Components/Video1'
@@ -23,12 +23,14 @@ import Subscribe from './Components/Subscribe'
 import Videocarousel from './Components/Videocarousel'
 import Results from './Components/Results'
 import Preloader from './Components/Preloader'
-
-
+import FAQS from './Components/FAQS'
+import BottomBar from './Components/BottomBar'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 
 function App() {
-
 
   const [loading, setLoading] = useState(true);
   const [progress, setProgress] = useState(0);
@@ -46,6 +48,7 @@ function App() {
     }, 30); // Adjust the interval time as needed
 
     return () => clearInterval(interval);
+
   }, []);
 
   if (loading) {
@@ -53,7 +56,6 @@ function App() {
   }
 
   const router = createBrowserRouter([
-
 
     {
       path: "/TermsandConditions",
@@ -89,7 +91,9 @@ function App() {
           <Trusted_section />
           <Logos_section />
           <Results />
+          <FAQS />
           <Getstarted />
+          <BottomBar />
         </div>
         <Footer />
       </>)
@@ -99,9 +103,9 @@ function App() {
 
   return (
     <>
-      
-        <RouterProvider router={router} />
-    
+
+      <RouterProvider router={router} />
+
     </>
   )
 }

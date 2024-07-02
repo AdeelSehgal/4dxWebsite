@@ -48,8 +48,8 @@ const Results = () => {
 
 
     return (
-        <div className='md:flex justify-center items-center max-h-[80vh] overflow-hidden bg-[#fff]  '>
-            <div className='text-[5.5vw] font-semibold w-[25%] pl-10 ' >
+        <div className='md:flex justify-center items-center max-h-[80vh] w-full overflow-hidden bg-[#fff]  '>
+            <div className='text-[50px] font-semibold w-[25%] pl-10 ' >
                 <h3 className=''> Results that Speak for </h3>
                 <h3 className='membership text-zinc-500'>themselves</h3>
             </div>

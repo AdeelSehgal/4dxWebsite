@@ -64,7 +64,7 @@ const Membership_section = () => {
                         <p>Simple and straight-forward pricing.</p>
                         <strong>No fluff, No hidden charges.</strong>
                     </div>
-                    <div className=' '>
+                    <div className=' ' id='pricing'>
                         <div className='flex justify-around text-[14px]  items-center bg-zinc-100  font-medium mx-auto h-[4.5rem] rounded-xl '>
                             <div ref={MonthlyRef} onClick={MonthlyColor} className=' w-1/4 bg-[#ebb7f5] rounded-xl text-center p-3 text-black  cursor-pointer'>Monthly</div>
                             <div ref={QuaterlyRef} onClick={QuaterlyColor} className='w-1/4  rounded-xl text-center p-3 cursor-pointer'>Quaterly</div>

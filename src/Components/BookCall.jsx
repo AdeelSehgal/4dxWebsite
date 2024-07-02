@@ -59,7 +59,7 @@ const BookCall = () => {
                 <div className='w-[60%] flex flex-col  py-4 '>
                     <h4 className='text-3xl font-semibold h-[4.5rem] '>Refer a friend & earn</h4>
                     <p className='text-sm h-[4rem]  '>Earn 10% monthly recurring commission for each referral.</p>
-                    <button ref={joinNowBtnRef} className='magnetic-btn w-[65%]   py-4  rounded-xl border-[2px] border-black text-white flex justify-center gap-x-3 items-center'>
+                    <button ref={joinNowBtnRef} className='magnetic-btn w-[65%]   py-4 gradientbutton text-white flex justify-center gap-x-3 items-center'>
                         <div className='font-semibold text-lg text-black'>Join Now</div>
                         <img className='mt-1' src="https://cdn.prod.website-files.com/646c6ec121d9bb039374fb89/64d5d79abf8d81d90a15c762_Vector.svg" alt="" />
                     </button>

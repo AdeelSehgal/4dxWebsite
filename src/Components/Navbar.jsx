@@ -1,25 +1,30 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import HambergerMene from './HambergerMene';
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
-const Navbar = () => {
+const Navbar = ({ serviceLinkCol }) => {
 
     const [menu, setmenu] = useState(null)
 
     const logoRef = useRef();
     const BookRef = useRef();
     const SignRef = useRef();
+    const serviceRef = useRef()
 
     const menuVisible = () => {
-        if(menu==null){
-            setmenu(<HambergerMene/>)
+        if (menu == null) {
+            setmenu(<HambergerMene />)
         }
-        else{
+        else {
             setmenu(null)
         }
     };
 
     useEffect(() => {
+
         const addMagneticEffect = (button) => {
             const handleMouseMove = (e) => {
                 const rect = button.getBoundingClientRect();
@@ -48,6 +53,7 @@ const Navbar = () => {
                 window.removeEventListener('mousemove', handleMouseMove);
                 button.removeEventListener('mouseleave', handleMouseLeave);
             };
+
         };
 
         addMagneticEffect(logoRef.current);
@@ -56,28 +62,27 @@ const Navbar = () => {
 
     }, []);
 
-
     return (
-        <div className='absolute z-[3] left-0 right-0 '>
-            <div className='w-[95%] bg-black text-white mt-3 flex justify-between items-center h-20 mx-auto  rounded-xl    px-16 '>
-                <Link to={"/"}>
-                    <div className='cursor-pointer '>
+        <div className=' z-[3] left-0 right-0 fixed '>
+            <div style={{ background: 'black' }} className='w-[95%] text-white mt-3 flex justify-between items-center h-20 mx-auto  rounded-xl px-16 '>
+                <Link to={"/"} >
+                    <div className='cursor-pointer'>
                         <img ref={logoRef} src="https://cdn.prod.website-files.com/646c6ec121d9bb039374fb89/6512a6905ed7ebbc2cd9f781_Group%2010100.svg" alt="" />
                     </div>
                 </Link>
-                <div className='ml-5 hidden lg:block'>
-                    <div className='flex  items-baseline gap-4 justify-center'>
-                        <div className="font-semibold text-sm hover:bg-[#c9ff00] hover:text-black px-3 p-1 cursor-pointer py-2 rounded-lg ">Solutions</div>
+                <div className='ml-5 hidden lg:block' >
+                    <div className='flex  items-baseline gap-4 justify-center' >
+                        <a style={{ backgroundColor: serviceLinkCol, borderRadius: 10 }} href="#service" > <div className="font-semibold  text-sm hover:bg-[#c9ff00] hover:text-black px-3 p-1 cursor-pointer py-2 rounded-[10px]  " ref={serviceRef} >Solutions</div></a>
                         <div className=' bg-[#c9ff00] w-[6px] h-[6px] rounded-full'></div>
                         <div className="font-semibold text-sm hover:bg-[#c9ff00] hover:text-black px-3 p-1 cursor-pointer py-2 rounded-lg ">Work</div>
                         <div className=' bg-[#c9ff00] w-[6px] h-[6px] rounded-full'></div>
-                        <div className="font-semibold text-sm hover:bg-[#c9ff00] hover:text-black px-3 p-1 cursor-pointer py-2 rounded-lg ">Pricing</div>
+                        <a href="#pricing"> <div className="font-semibold text-sm hover:bg-[#c9ff00] hover:text-black px-3 p-1 cursor-pointer py-2 rounded-lg ">Pricing</div></a>
                         <div className=' bg-[#c9ff00] w-[6px] h-[6px] rounded-full'></div>
                         <div className="font-semibold text-sm hover:bg-[#c9ff00] hover:text-black px-3 p-1 cursor-pointer py-2 rounded-lg ">Blog</div>
                     </div>
                 </div>
                 <div className=' justify-center items-center  '>
-                    <div className=' flex lg:hidden '  onClick={menuVisible}>
+                    <div className=' flex lg:hidden ' onClick={menuVisible}>
                         <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 256 256" width="30px" height="30px">
                             <g fill="#f8f8f8" fillRule="nonzero" stroke="none" strokeWidth="1" strokeLinecap="butt" strokeLinejoin="miter" strokeMiterlimit="10" fontFamily="none" fontWeight="none" fontSize="none" textAnchor="none" style={{ mixBlendMode: 'normal' }}>
                                 <g transform="scale(5.12,5.12)">
@@ -90,7 +95,7 @@ const Navbar = () => {
                         <Link to={"/Contact"} className='w-fit]'>
                             <button ref={BookRef} className='   text-sm font-semibold'>Book a call</button>
                         </Link>
-                        <button ref={SignRef} className=' w-[9rem] py-4 font-semibold text-sm border border-white rounded-xl'>Sign up</button>
+                        <button ref={SignRef} className=' w-[9rem] py-4 font-semibold gradientbutton text-sm z-[1] bg-black  rounded-xl'>Sign up</button>
                     </div>
                 </div>
 
