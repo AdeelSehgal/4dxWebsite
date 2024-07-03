@@ -64,7 +64,7 @@ const Navbar = ({ serviceLinkCol }) => {
 
     return (
         <div className=' z-[3] left-0 right-0 fixed '>
-            <div style={{ background: 'black' }} className='w-[95%] text-white mt-3 flex justify-between items-center h-20 mx-auto  rounded-xl px-16 '>
+            <div style={{ background: 'black' }} className='w-[95%] text-white mt-3 flex justify-between items-center h-20 mx-auto  rounded-xl px-5 '>
                 <Link to={"/"} >
                     <div className='cursor-pointer'>
                         <img ref={logoRef} src="https://cdn.prod.website-files.com/646c6ec121d9bb039374fb89/6512a6905ed7ebbc2cd9f781_Group%2010100.svg" alt="" />
@@ -83,7 +83,7 @@ const Navbar = ({ serviceLinkCol }) => {
                 </div>
                 <div className=' justify-center items-center  '>
                     <div className=' flex lg:hidden ' onClick={menuVisible}>
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 256 256" width="30px" height="30px">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 256 256" width="20px" height="20px">
                             <g fill="#f8f8f8" fillRule="nonzero" stroke="none" strokeWidth="1" strokeLinecap="butt" strokeLinejoin="miter" strokeMiterlimit="10" fontFamily="none" fontWeight="none" fontSize="none" textAnchor="none" style={{ mixBlendMode: 'normal' }}>
                                 <g transform="scale(5.12,5.12)">
                                     <path d="M0,7.5v5h50v-5zM0,22.5v5h50v-5zM0,37.5v5h50v-5z"></path>

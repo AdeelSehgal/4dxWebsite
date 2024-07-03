@@ -41,10 +41,10 @@ const BookCall = () => {
 
     return (
         <div className='lg:flex justify-center items-center py-4 bg-[#fff]'>
-            <div className='lg:w-[42%] sm:w-[95%] bg-[#c9ff00] mb-5 p-5 rounded-2xl mx-4 flex justify-around items-center hover:-translate-y-5 duration-150 transition-all'>
-                <div className='w-[60%] flex flex-col  py-4 '>
+            <div className='lg:w-[42%] sm:w-[95%] bg-[#c9ff00] mb-5 p-5 rounded-2xl mx-4 sm:flex justify-around items-center hover:-translate-y-5 duration-150 transition-all'>
+                <div className='sm:w-[60%] flex flex-col  py-4 '>
                     <h4 className='text-3xl font-semibold h-[4.5rem] '>Book a call</h4>
-                    <p className='text-sm  h-[4rem]  '>Learn about how we can help you grow your business with the right design partner</p>
+                    <p className='text-sm  pb-5   '>Learn about how we can help you grow your business with the right design partner</p>
                     <button ref={bookCallBtnRef} className='magnetic-btn w-[65%]  py-4   bg-black rounded-xl text-white flex justify-center gap-x-3 items-center'>
                         <div className='font-semibold text-lg'>Book a Call</div>
                         <img className='mt-1 invert' src="https://cdn.prod.website-files.com/646c6ec121d9bb039374fb89/64d5d79abf8d81d90a15c762_Vector.svg" alt="" />
@@ -55,9 +55,9 @@ const BookCall = () => {
                 </div>
             </div>
 
-            <div className='lg:w-[42%] sm:w-[95%] border border-zinc-300 mb-5 p-5 rounded-2xl mx-4  flex justify-around items-center hover:-translate-y-5 duration-150 transition-all'>
-                <div className='w-[60%] flex flex-col  py-4 '>
-                    <h4 className='text-3xl font-semibold h-[4.5rem] '>Refer a friend & earn</h4>
+            <div className='lg:w-[42%] sm:w-[95%] border border-zinc-300 mb-5 p-5 rounded-2xl mx-4  sm:flex justify-around items-center hover:-translate-y-5 duration-150 transition-all'>
+                <div className='sm:w-[60%] flex flex-col  py-4 '>
+                    <h4 className='text-3xl font-semibold pb-5 '>Refer a friend & earn</h4>
                     <p className='text-sm h-[4rem]  '>Earn 10% monthly recurring commission for each referral.</p>
                     <button ref={joinNowBtnRef} className='magnetic-btn w-[65%]   py-4 gradientbutton text-white flex justify-center gap-x-3 items-center'>
                         <div className='font-semibold text-lg text-black'>Join Now</div>

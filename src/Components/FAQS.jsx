@@ -5,7 +5,7 @@ const FAQS = () => {
     return (
         <div className='bg-black py-10'>
             <div className='p-10'>
-                <div className='w-[68%] text-[55px] font-semibold '>
+                <div className='w-[68%] md:text-[55px] text-[30px] font-semibold '>
                     <span className=' text-zinc-500'>Our</span>
                     <span className=' membership ml-3  text-white'> FAQS</span>
                 </div>

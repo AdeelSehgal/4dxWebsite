@@ -85,17 +85,17 @@ const ServicesSection = () => {
 
     return (
         <div className='bg-[#fff] pb-14  '>
-            <div className='bg-zinc-50 text-black py-10 pb-24 pt-32  rounded-b-[50px] '>
-                <div className='flex justify-between px-16 items-center mb-5 '>
-                    <div className='w-[68%] text-[50px] font-semibold' id='service'>
+            <div className='bg-zinc-50 text-black py-10 pb-24 sm:pt-32  pt-10 rounded-b-[50px] '>
+                <div className='sm:flex sm:justify-between sm:px-16 px-4  items-center mb-5 '>
+                    <div className='w-[68%] sm:text-[50px] text-[35px] font-semibold' id='service'>
                         <h3>Our</h3>
                         <div className='text-zinc-500 service'> services</div>
                     </div>
-                    <div className='w-[32%]  text-zinc-500 '>
+                    <div className='sm:w-[32%] pt-3   text-zinc-500 '>
                         <p>Assemble a fully capable design and development team overnight so you can scale fast 🙌</p>
                     </div>
                 </div>
-                <div className='md:grid grid-cols-2 w-[95%] gap-12 mx-auto ' ref={serviceSecRef}>
+                <div className='md:grid grid-cols-2 w-[90%] gap-12 mx-auto ' ref={serviceSecRef}>
                     <div className=''>
                         <div ref={firstdivRef} onClick={firstdivClick} className='' >
                             <Box heading="Branding" src="https://cdn.prod.website-files.com/646c6ec121d9bb039374fb89/64d5d79abf8d81d90a15c7a8_Group%201680.svg" />

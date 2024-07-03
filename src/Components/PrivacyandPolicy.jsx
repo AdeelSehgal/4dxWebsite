@@ -7,19 +7,19 @@ const PrivacyandPolicy = () => {
     return (
         <div>
             <Navbar />
-            <div className='px-12  bg-white z-[2] relative rounded-b-3xl pb-10 mb-[100vh]  pt-[50px]'>
-                <h1 className='text-center text-[55px] font-semibold py-20'>Privacy Policy</h1>
-                <p className='text-[18px] text-[#858585] px-12 '> Buzz Interactive, LLC (“we,” “us,”,”we want design” and “our”) is committed to protecting your privacy and personal information that you provide to us when accessing or using our Services, products, or this website (this “Site”).  This privacy policy (this “Policy”) explains how we gather and use the information that we collect during your visit to this Site.
+            <div className='md:px-12  bg-white z-[2] relative rounded-b-3xl pb-10 md:mb-[100vh]  pt-[50px]'>
+                <h1 className='text-center md:text-[55px] text-[35px]  font-semibold py-20'>Privacy Policy</h1>
+                <p className='text-[18px] text-[#858585] md:px-12 px-4 '> Buzz Interactive, LLC (“we,” “us,”,”we want design” and “our”) is committed to protecting your privacy and personal information that you provide to us when accessing or using our Services, products, or this website (this “Site”).  This privacy policy (this “Policy”) explains how we gather and use the information that we collect during your visit to this Site.
 
                     This Policy may change over time, so please be sure to reread it from time to time. Amendments, modifications or changes to this Policy will be posted at this URL and will be effective when posted.  Your continued use of this Site following the posting of any amendment, modifications or change to this Policy shall constitute your acceptance thereof.  If you do not agree with the terms in this Policy, please do not use this Site and do not provide any information to us. Unless otherwise defined in this Policy, the terms used in this Policy have the meaning given to them in our Terms of Service, which you can access here: https://www.wewantdesign.co/terms-conditions</p>
 
-                <div className='px-12 my-3'>
+                <div className='md:px-12 px-4 my-3'>
                     <h2 className='text-[32px] font-bold '>Restrictions</h2>
                     <p className='text-[18px] text-[#858585] my-4 '>This Policy covers your access to our Services and to this Site. Our Site is not directed to and is not intended for access and use by persons under the age of 18.  We do not intentionally collect or use Personal Data from users that we have reason to believe are under the age of 18.</p>
                 </div>
 
 
-                <div className='px-12 my-3'>
+                <div className='md:px-12 px-4 my-3'>
                     <h2 className='text-[32px] font-bold '>Personal Data Collected</h2>
                     <p className='text-[18px] text-[#858585] my-4 '>The type of Personal Data (defined below) and Other Data (also defined below) we collect depends on how you are specifically interacting with this Site how you are using our Services. Generally, we gather Personal Data and Other Data as described below.
                         <br /><br />
@@ -35,7 +35,7 @@ const PrivacyandPolicy = () => {
                 </div>
 
 
-                <div className='px-12 my-3'>
+                <div className='md:px-12 px-4 my-3'>
                     <h2 className='text-[32px] font-bold '>Use and Disclosure of Personal Data</h2>
                     <p className='text-[18px] text-[#858585] my-4 '>Our primary goal in collecting, using, and sharing your information is to enhance and improve our Services. To that end, we will only use Personal Data for legitimate business purposes, including the following: <br /> <br />
 
@@ -56,7 +56,7 @@ const PrivacyandPolicy = () => {
                 </div>
 
 
-                <div className='px-12 my-3'>
+                <div className='md:px-12 px-4 my-3'>
                     <h2 className='text-[32px] font-bold '>Collection and Use of Other Data  </h2>
                     <p className='text-[18px] text-[#858585] my-4 '>Our service providers and we may also collect and use the following types of data, referred to in this Policy as “Other Data <br /> <br />
 
@@ -84,14 +84,14 @@ const PrivacyandPolicy = () => {
                 </div>
 
 
-                <div className='px-12 my-3'>
+                <div className='md:px-12 px-4 my-3'>
                     <h2 className='text-[32px] font-bold '>Our Advertising</h2>
                     <p className='text-[18px] text-[#858585] my-4 '>We may use third-party advertising companies to serve advertisements regarding products and Services that may be of interest to you when you access and use this Site, our apps and other websites or online services, based on information relating to your access to and use of this Site and other websites or online services on any of your devices, as well as on information received from third parties.
                         To do so, these companies may place or recognize a unique cookie on your browser (including through the use of pixel tags).  They may also use these technologies, along with information they collect about your online use, to recognize you across the devices you use, such as a mobile phone and a laptop.</p>
                 </div>
 
 
-                <div className='px-12 my-3'>
+                <div className='md:px-12 px-4 my-3'>
                     <h2 className='text-[32px] font-bold '>Security</h2>
                     <p className='text-[18px] text-[#858585] my-4 '>We may store your Personal Data.  This information is retained and used in accordance with existing laws, rules, regulations, and other policies.While there is no such thing as “perfect security” on the Internet, we will take reasonable steps to insure the safety of your Personal Data.  Personal Data is stored on our server and is not publicly accessible.  To prevent unauthorized access, maintain data accuracy, and ensure the correct use of information, we take reasonable precautions and have security measures in place to protect the loss, misuse and alteration of the information under our control.
                         Although we attempt to ensure the integrity and security of our network and systems, we cannot guarantee that our security measures will prevent third-party “hackers” from illegally obtaining this information.  We are not responsible for any breach of its security or for the actions of any third parties that may obtain any Personal Data.  You are prohibited from violating or attempting to violate security for or otherwise interfering with the operation of this Site.  We do not make, and expressly disclaim, any representation or warranty, express or implied, regarding the security or integrity of this Site and your Personal Data.If you have reason to believe that your interaction with us is no longer secure (for example, if you feel that the security of any account you might have with us has been compromised), please notify us of the problem immediately by sending an email to <b>hi@wewantdesign.co. </b></p>
@@ -99,19 +99,19 @@ const PrivacyandPolicy = () => {
 
 
 
-                <div className='px-12 my-3'>
+                <div className='md:px-12 px-4 my-3'>
                     <h2 className='text-[32px] font-bold '>Data Integrity; Retention Period </h2>
                     <p className='text-[18px] text-[#858585] my-4 '>We will use Personal Data only in ways that are compatible with the purposes for which it was collected, authorized by this Policy, or authorized by you.  We will take reasonable steps to ensure that Personal Data is relevant to its intended use, and is accurate, complete, and current (as provided by you).  We depend on you to update or correct your Personal Data whenever necessary.We will retain Personal Data about you for as long as needed or permitted in light of the purpose(s) for which it was obtained and consistent with applicable law. The criteria used to determine our retention periods include: (i) the length of time we have an ongoing relationship with you; (ii) whether there is a legal obligation to which we are subject; and (iii) whether retention is advisable in light of our legal position (such as in regard to applicable statutes of limitations, litigation or regulatory investigations).</p>
                 </div>
 
 
-                <div className='px-12 my-3'>
+                <div className='md:px-12 px-4 my-3'>
                     <h2 className='text-[32px] font-bold '>Consent </h2>
                     <p className='text-[18px] text-[#858585] my-4 '>By visiting our Site, you expressly consent to the collection and use by us of Personal Data according to this Policy.</p>
                 </div>
 
 
-                <div className='px-12 my-3'>
+                <div className='md:px-12 px-4 my-3'>
                     <h2 className='text-[32px] font-bold '>Choice; Opt-Out </h2>
                     <p className='text-[18px] text-[#858585] my-4 '>We give you choices regarding our use and disclosure of your Personal Data for marketing purposes.
 
@@ -123,14 +123,14 @@ const PrivacyandPolicy = () => {
                 </div>
 
 
-                <div className='px-12 my-3'>
+                <div className='md:px-12 px-4 my-3'>
                     <h2 className='text-[32px] font-bold '>Links </h2>
                     <p className='text-[18px] text-[#858585] my-4 '>This Site may contain links to other Internet web sites, including social media sites and third-party hosted collaboration tools.  These linked sites are not under our control.  We provide links only as a convenience, and we does not endorse or control, and is not responsible for, the privacy practices or the content of these linked sites.  If you provide any Personal Data through any third-party web site, or choose to communicate with us using third-party collaboration tools or other social media platforms, your transaction will occur on that third party’s web site (not this Site) and the Personal Data you provide will be collected by, and controlled by the privacy policy of, that third party. <br />
                         We recommend that you familiarize yourself with the privacy policies and practices of any such third parties.  PLEASE NOTE THAT THIS POLICY DOES NOT ADDRESS THE PRIVACY OR INFORMATION PRACTICES OF ANY THIRD PARTIES, INCLUDING, WITHOUT LIMITATION, AFFILIATED ENTITIES THAT DO NOT POST OR LINK DIRECTLY TO THIS POLICY.</p>
                 </div>
 
 
-                <div className='px-12 my-3'>
+                <div className='md:px-12 px-4 my-3'>
                     <h2 className='text-[32px] font-bold '>Governing Law and Enforcement of Privacy Policy </h2>
                     <p className='text-[18px] text-[#858585] my-4 '>Use of this Site is governed by United States law and the laws of the State of Wyoming.  If you are accessing this Site or Services from a physical location outside of the United States with laws or regulations governing personal data collection, use, and disclosure that are different from United States laws, you agree that by accessing this Site, you are transferring your Personal Data and Other Data to the United States and you consent to the application of the laws of the United States and the State of Wyoming with respect to use of this Site and Services and any dispute regarding this Site or this Policy. <br />
                         You further consent to the exclusive jurisdiction of, and agree that venue is proper in, the state and federal courts located in Wyoming; provided, however, that if the state and federal courts in Wyoming are found not to have exclusive jurisdiction, then you agree to settle all disputes arising out of or relating to this Site or this Policy by binding arbitration in Wyoming in accordance with the International Arbitration Rules set by the International Centre for Dispute Resolution. <br />
@@ -138,19 +138,19 @@ const PrivacyandPolicy = () => {
                 </div>
 
 
-                <div className='px-12 my-3'>
+                <div className='md:px-12 px-4 my-3'>
                     <h2 className='text-[32px] font-bold '>Do Not Track Disclosures</h2>
                     <p className='text-[18px] text-[#858585] my-4 '>We do not respond to Do Not Track (“DNT”) signals at this time.  Some third party sites may track your actions when you are browsing and accessing content.  Various browsers offer a DNT option that sends a signal to third parties that you do not want to be tracked.</p>
                 </div>
 
 
-                <div className='px-12 my-3'>
+                <div className='md:px-12 px-4 my-3'>
                     <h2 className='text-[32px] font-bold '>Data Controller</h2>
                     <p className='text-[18px] text-[#858585] my-4 '>For the purposes of this Policy, you are the Data Controller of your Personal Data.  “Data Controller” means a person who (either alone or jointly or in common with other persons) determined the purposes for which and the manner in which any Personal Data is, or will be, processed.  We should be considered only as a processor on your behalf as to any Personal Data that is subject to the requirements of European Union’s Directive 95/46/EC.  We may use the services of various third-party service providers in order to process your data more effectively.</p>
                 </div>
 
 
-                <div className='px-12 my-3'>
+                <div className='md:px-12 px-4 my-3'>
                     <h2 className='text-[32px] font-bold '>Cross Border Transfer of Personal Data</h2>
                     <p className='text-[18px] text-[#858585] my-4 '>Your Personal Data may be stored and processed in any country where we have facilities or in which we engage service providers.  If you are accessing this Site from outside the United States, you may be sending information, including Personal Data to the United States where our servers are located.  That information may be transferred within the United States or back out of the United States to other countries outside your country of residence. <br />
                         These countries do not necessarily have data protection laws as comprehensive as those in your country.
@@ -158,7 +158,7 @@ const PrivacyandPolicy = () => {
                         In certain circumstances, courts, law enforcement agencies, regulatory agencies, or security authorities in those other countries may be entitled to access your Personal Data.</p>
                 </div>
 
-                <div className='px-12 my-3'>
+                <div className='md:px-12 px-4 my-3'>
                     <h2 className='text-[32px] font-bold '>Contact Us.</h2>
                     <p className='text-[18px] text-[#858585] my-4 '>f you have any questions about this Policy or the practices of this Site, you can email us at hi@wewantdesign.co</p>
                 </div>

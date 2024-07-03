@@ -17,12 +17,9 @@ const TextAnimation = () => {
     }, [])
 
     return (
-        <div className='h-screen w-screen flex items-center justify-center'>
-            <div className='max-h-full max-w-full overflow-hidden'>
-                <Lottie animationData={Animation} lottieRef={LottieRef} className='h-full w-full' />
-            </div>
+        <div className=' flex justify-center overflow-hidden items-center border h-screen w-screen'>
+            <Lottie animationData={Animation} lottieRef={LottieRef} className='' />
         </div>
     )
 }
-
 export default TextAnimation

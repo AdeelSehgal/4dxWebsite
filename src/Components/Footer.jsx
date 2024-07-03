@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
-        <div className='bg-black w-[100vw]  sm:fixed bottom-0 z-[1] left-0 right-0 '>
-            <div className='md:flex md:items-center md:justify-between py-4 pt-[100vh]    px-10 '>
-                <div className="first text-zinc-400 sm:w-[25%]  ">
+        <div className='bg-black  md:fixed md:bottom-0 pt-[100vh]  w-full '>
+            <div className='md:flex md:items-center md:justify-between py-4 px-10 '>
+                <div className="first text-zinc-400 md:w-[25%]  ">
                     <div className="logo my-5 mt-14 cursor-pointer">
                         <img src="https://cdn.prod.website-files.com/646c6ec121d9bb039374fb89/6512a6905ed7ebbc2cd9f781_Group%2010100.svg" alt="" width={170} />
                     </div>
@@ -30,54 +30,49 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div className="second sm:w-[10%] my-4">
-                    <div className='text-white text-xl font-bold mb-3'>Design by</div>
-                    <div className='text-zinc-400 space-y-3'>
-                        <div className='cursor-pointer hover:text-white'>Locations</div>
-                        <div className='cursor-pointer hover:text-white'>Industries</div>
-                        <div className='cursor-pointer hover:text-white'>Use cases</div>
-                        <div className='cursor-pointer hover:text-white'>Services</div>
+                <div className='sm:flex sm:justify-between  sm:items-center  md:w-[40%]'>
+                    <div className="second my-4">
+                        <div className='text-white text-xl font-bold mb-3'>Design by</div>
+                        <div className='text-zinc-400 space-y-3'>
+                            <div className='cursor-pointer hover:text-white'>Locations</div>
+                            <div className='cursor-pointer hover:text-white'>Industries</div>
+                            <div className='cursor-pointer hover:text-white'>Use cases</div>
+                            <div className='cursor-pointer hover:text-white'>Services</div>
+                        </div>
+                    </div>
+                    <div className="third ">
+                        <div className='text-white text-xl font-bold mb-3'>Resources</div>
+                        <div className='text-zinc-400 space-y-3'>
+                            <div className='cursor-pointer hover:text-white'>Blog</div>
+                            <div className='cursor-pointer hover:text-white'>Podcast</div>
+                            <div className='cursor-pointer hover:text-white'>E-book</div>
+                            <div className='cursor-pointer hover:text-white'>Guides</div>
+                        </div>
+                    </div>
+                    <div className="fourth  my-4">
+                        <div className='text-white text-xl font-bold mb-3 '>Company</div>
+                        <div className='text-zinc-400 space-y-3'>
+                            <div className='cursor-pointer hover:text-white'>Case study</div>
+                            <div className='cursor-pointer hover:text-white'>Portfolio</div>
+                            <div className='cursor-pointer hover:text-white'>Careers</div>
+                            <div className='cursor-pointer hover:text-white'>Contact</div>
+                        </div>
                     </div>
                 </div>
-                <div className="third w-[10%]">
-                    <div className='text-white text-xl font-bold mb-3'>Resources</div>
-                    <div className='text-zinc-400 space-y-3'>
-                        <div className='cursor-pointer hover:text-white'>Blog</div>
-                        <div className='cursor-pointer hover:text-white'>Podcast</div>
-                        <div className='cursor-pointer hover:text-white'>E-book</div>
-                        <div className='cursor-pointer hover:text-white'>Guides</div>
-                    </div>
-                </div>
-                <div className="fourth w-[10%]">
-                    <div className='text-white text-xl font-bold mb-3'>Company</div>
-                    <div className='text-zinc-400 space-y-3'>
-                        <div className='cursor-pointer hover:text-white'>Case study</div>
-                        <div className='cursor-pointer hover:text-white'>Portfolio</div>
-                        <div className='cursor-pointer hover:text-white'>Careers</div>
-                        <div className='cursor-pointer hover:text-white'>Contact</div>
-                    </div>
-                </div>
-                <div className="fifth text-white text-[2rem] hidden md:block font-semibold w-[25%]">
-                    Let's build something great
-                    <div className='flex items-center gap-3'>
-                        <div className='text-[#c9ff00] cursor-pointer '>let's talk</div>
-                        <div className='bg-[#c9ff00] letstalk'>
-                            <img src="https://cdn.prod.website-files.com/646c6ec121d9bb039374fb89/64d5d79abf8d81d90a15c7aa_Vector%20(3).svg" alt="Black Arrow" />
+                <div className='md:w-[25%]'>
+                    <div className="fifth text-white text-[2rem] font-semibold ">
+                        Let's build something great
+                        <div className='flex items-center gap-3'>
+                            <div className='text-[#c9ff00] cursor-pointer '>let's talk</div>
+                            <div className='bg-[#c9ff00] letstalk'>
+                                <img src="https://cdn.prod.website-files.com/646c6ec121d9bb039374fb89/64d5d79abf8d81d90a15c7aa_Vector%20(3).svg" alt="Black Arrow" />
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="fifth text-white text-[2rem] px-10 font-semibold md:hidden block ">
-                Let's build something great
-                <div className='flex items-center gap-3'>
-                    <div className='text-[#c9ff00] cursor-pointer '>let's talk</div>
-                    <div className='bg-[#c9ff00] letstalk'>
-                        <img src="https://cdn.prod.website-files.com/646c6ec121d9bb039374fb89/64d5d79abf8d81d90a15c7aa_Vector%20(3).svg" alt="Black Arrow" />
-                    </div>
-                </div>
-            </div>
-            <div className='flex justify-between items-center text-white bg-black  border-b border-t border-zinc-800 p-4 px-16'>
-                <div>We Want Design © 2023</div>
+            <div className='md:flex justify-between items-center text-white bg-black  border-b border-t border-zinc-800 p-4 md:px-16'>
+                <div className='text-center py-4'>We Want Design © 2023</div>
                 <div className='text-zinc-500 flex justify-evenly items-center gap-x-8'>
                     <Link className='cursor-pointer text-sm hover:text-white'>Manage Subscription</Link>
                     <Link to='/TermsandConditions' className='cursor-pointer text-sm hover:text-white'>Terms of Services</Link>

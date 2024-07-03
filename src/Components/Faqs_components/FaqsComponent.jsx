@@ -28,10 +28,9 @@ const FAQS = ({ heading, desc }) => {
     };
 
     return (
-        <div className='bg-black'>
-            <div className=''>
+        <div className='bg-black w-[90%] mx-auto'>
                 <div className='flex justify-center items-start gap-3 my-5'>
-                    <div className='bg-white p-5 rounded-full' ref={crossDivRef} onClick={crossClick}>
+                    <div className='bg-white p-3 md:p-5 rounded-full ' ref={crossDivRef} onClick={crossClick}>
                         <img src="https://cdn.prod.website-files.com/646c6ec121d9bb039374fb89/64db27fb079bd717a8e5a7a2_Group%201190.svg" alt="" />
                     </div>
                     <div ref={contentRef} className='text-white font-semibold text-lg w-[80%] rounded-lg p-5'>
@@ -39,7 +38,6 @@ const FAQS = ({ heading, desc }) => {
                         <p className='text-zinc-400 font-normal hidden'>{desc}</p>
                     </div>
                 </div>
-            </div>
         </div>
     );
 };

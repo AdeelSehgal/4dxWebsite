@@ -74,7 +74,7 @@ function App() {
       path: "/",
       element: (< >
         <Navbar />
-        <div className='z-[2] relative mb-[100vh]'>
+        <div className='z-[2] relative md:mb-[100vh]'>
           <TextAnimation />
           <Video1 />
           <TiredofTheseIssues />

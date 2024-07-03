@@ -72,7 +72,7 @@ const Monthly_package = () => {
 
             {/* Design + Dev */}
 
-            <div className='lg:w-[30%] w-[95%] mx-auto lg:my-0 my-20  py-7 bg-[#f7f7f8] px-10  rounded-xl border border-zinc-300 hover:-translate-y-5 duration-150 transition-all '>
+            <div className='lg:w-[30%] w-[95%] mx-auto lg:my-0 my-10  py-7 bg-[#f7f7f8] px-10  rounded-xl border border-zinc-300 hover:-translate-y-5 duration-150 transition-all '>
                 <div className="banner bg-[#c9ff00]  mx-auto p-2 w-fit font-semibold text-[12px] relative rounded-lg  left-0 -top-10 ">Best value</div>
                 <h2 className='text-xl font-semibold '>Design + Dev</h2>
                 <p className='text-zinc-500   h-20 pt-5 '>A turnkey design and development solution</p>

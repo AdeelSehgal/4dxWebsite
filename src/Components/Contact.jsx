@@ -3,10 +3,10 @@ import React from 'react'
 const Contact = () => {
     return (
         <div>
-            <div className='bg-[#fff] relative py-20 px-14 z-[2] mb-[100vh] pt-32 flex gap-x-24 justify-evenly items-center rounded-b-[50px] '>
-                <div className='w-[40%]'>
+            <div className='bg-[#fff] relative py-20 md:px-14 px-3 z-[2] lg:mb-[100vh] pt-32 lg:flex gap-x-24 justify-evenly items-center rounded-b-[50px] '>
+                <div className='lg:w-[40%] '>
                     <div className='flex items-center gap-x-5 mb-10'>
-                        <h1 className='membership text-[50px] font-semibold'>Contact us</h1>
+                        <h1 className='membership md:text-[50px] text-[35px] font-semibold'>Contact us</h1>
                         <div className='rounded-full bg-[#c9ff00] w-[10px] h-[10px] '></div>
                     </div>
                     <p className='text-zinc-500 mb-20 '>Hop on board our design rocket, where you can choose between memberships for on-going missions or classic quotes for large-scale projects. Shoot us a message, and let's create visual wonders that'll leave you starry-eyed! 🚀🎨😄</p>
@@ -29,15 +29,15 @@ const Contact = () => {
                         </div>
                     </div>
                 </div>
-                <div className='w-[50%] flex justify-center items-center gap-5'>
-                    <div className=' border  border-zinc-200 p-7 rounded-2xl shadow-md w-[50%] hover:shadow-lg duration-300 transition-all hover:shadow-zinc-400 '>
+                <div className='lg:w-[50%] md:flex justify-center items-center gap-5'>
+                    <div className=' border  border-zinc-200 p-7 rounded-2xl shadow-md mt-3 md:w-[50%] hover:shadow-lg duration-300 transition-all hover:shadow-zinc-400 '>
                         <img src="https://cdn.prod.website-files.com/646c6ec121d9bb039374fb89/64d5d79abf8d81d90a15c7d7_Asset%201%403x-8%202.png" alt="" className='pb-6 pt-5 w-[50%]' />
-                        <h3 className='text-black font-semibold text-2xl pb-5'> Book a call</h3>
+                        <h3 className='text-black font-semibold text-2xl pb-5 '> Book a call</h3>
                         <p className='text-zinc-500  h-36  '>Let's kickstart your branding and design project with a bang! Schedule a call with us now and let our passion and expertise take care of your projects.</p>
                     </div>
-                    <div className=' border  border-zinc-200 p-7 rounded-2xl shadow-md w-[50%] hover:shadow-lg hover:shadow-zinc-400 duration-300 transition-all  '>
+                    <div className=' border  border-zinc-200 p-7 rounded-2xl shadow-md  mt-3 md:w-[50%] hover:shadow-lg hover:shadow-zinc-400 duration-300 transition-all  '>
                         <img src="https://cdn.prod.website-files.com/646c6ec121d9bb039374fb89/650d861ef111ba00a67b27fd_icon-min-p-500.webp" alt="" className='pb-6 pt-5 w-[70%]' />
-                        <h3 className='text-black font-semibold text-2xl pb-5 mt-6'> Write to us</h3>
+                        <h3 className='text-black font-semibold text-2xl pb-5 pt-10  '> Write to us</h3>
                         <p className='text-zinc-500  h-36  '>Project discussions, anyone? We're here, with ears wide open.</p>
                     </div>
                 </div>

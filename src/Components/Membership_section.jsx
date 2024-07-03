@@ -53,14 +53,14 @@ const Membership_section = () => {
 
 
     return (
-        <div className='bg-[#fff] py-10'>
-            <div className='lg:flex justify-between px-14 items-center mb-5'>
-                <div className='w-[68%] text-[55px] font-semibold'>
+        <div className='bg-[#fff] py-10 border'>
+            <div className='lg:flex justify-between md:px-14 px-4 items-center mb-5'>
+                <div className='md:w-[68%]  md:text-[55px] text-[35px] font-semibold'>
                     <h3 className='membership'>Membership</h3>
                     <div className='text-zinc-500 ml-3 '> plan</div>
                 </div>
-                <div className=' lg:w-[32%] my-4 text-zinc-500 '>
-                    <div className='mb-5'>
+                <div className=' lg:w-[32%]  my-4 text-zinc-500 '>
+                    <div className='mb-5 '>
                         <p>Simple and straight-forward pricing.</p>
                         <strong>No fluff, No hidden charges.</strong>
                     </div>

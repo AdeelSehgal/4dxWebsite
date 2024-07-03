@@ -10,7 +10,7 @@ const Subscribe = () => {
     useEffect(() => {
         if (myboxRef.current) {
             gsap.fromTo(myboxRef.current, { height: 0 }, {
-                height: 477,
+                height: 440,
                 scrollTrigger: {
                     trigger: myboxRef.current,
                     start: "top center", // When the top of myboxRef reaches the center of the viewport
@@ -25,12 +25,12 @@ const Subscribe = () => {
 
     return (
         <div className='flex justify-evenly items-center py-10 bg-[#fff] p-5'>
-            <div className='text-[55px] font-semibold w-[60%]  sticky top-0'>
+            <div className='text-[55px] w-[30%] font-semibold sticky top-0'>
                 <h3>How it</h3>
                 <div className='text-zinc-500 membership'>works</div>
             </div>
-            <div className='  relative'>
-                <div className='w-[60%]'>
+            <div className='  w-[40%] relative'>
+                <div className=''>
                     <div className='flex flex-col gap-36 z-[2]'>
                         <div className='flex justify-center items-center gap-4'>
                             <div className='border border-zinc-800 rounded-full w-[50px] h-[50px] flex items-center justify-center font-medium text-zinc-600'>

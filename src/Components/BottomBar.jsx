@@ -89,16 +89,16 @@ const BottomBar = () => {
     }, []);
 
     return (
-        <div ref={bottombarRef} className='md:flex md:justify-between md:items-center px-4 md:w-[80%] w-[95%] bg-white shadow-lg rounded-xl p-3 md:h-[12vh] sticky mx-auto hidden sm:block'>
-            <div className='flex justify-center items-center md:w-[60%] md::pb-0 pb-4 gap-3 font-semibold text-lg'>
+        <div  ref={bottombarRef} className='md:flex  md:justify-between md:items-center px-4 md:w-[87%] w-[95%] bg-white shadow-lg rounded-xl p-3 md:h-[12vh] fixed left-0 right-0 mx-auto hidden '>
+            <div className='flex  md:justify-start justify-center items-center md:w-[60%] md:pb-0 pb-4 gap-3 font-semibold text-lg'>
                 <img width={50} src="https://cdn.prod.website-files.com/646c6ec121d9bb039374fb89/650067467c5d8668c4e07a1c_Group%2010100-min.webp" alt="" />
                 <div className=''>Giving {heading} their time back</div>
             </div>
             <div className='flex justify-center items-center gap-4'>
-                <button ref={buttonRef} className='p-4 bg-black text-white rounded-xl font-semibold text-sm'>
+                <button ref={buttonRef} className='lg:p-4 px-3 py-2 bg-black text-white rounded-xl font-semibold text-sm'>
                     View Pricing 💰
                 </button>
-                <button ref={buttonRef2} className='bg-[#c9ff00] p-4 rounded-xl flex justify-center gap-x-3 items-center'>
+                <button ref={buttonRef2} className='bg-[#c9ff00] lg:p-4 px-3 py-2 rounded-xl flex justify-center gap-x-3 items-center'>
                     <div className='font-semibold text-sm'>Book a call </div>
                     <img className='mt-1' src="https://cdn.prod.website-files.com/646c6ec121d9bb039374fb89/64d5d78b6976705b46baa171_%F0%9F%93%9E.svg" alt="" />
                 </button>

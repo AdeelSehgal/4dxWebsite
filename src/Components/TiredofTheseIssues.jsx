@@ -41,7 +41,7 @@ const TiredofTheseIssues = () => {
     }
 
     return (
-        <div className='pt-20 rounded-b-[50px] bg-[#fff] pb-10 '>
+        <div className='pt-20 rounded-b-[50px] bg-[#fff] pb-10 hidden sm:block '>
             <h3 className='text-center font-semibold text-[55px]'>Tired of these issues</h3>
             <div className='flex justify-evenly text-[17px] items-center bg-[#f9f9f9] w-[60%] font-medium mx-auto h-20 rounded-xl mt-10 mb-5'>
                 <div ref={AgencyRef} onClick={agencyColor} className=' cursor-pointer w-1/4 bg-[#ebb7f5] rounded-xl text-center p-3'>Agency</div>
