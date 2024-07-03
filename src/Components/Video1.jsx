@@ -27,10 +27,9 @@ const Video1 = () => {
   }, []);
 
   return (
-    <div className='z-[2] bg-[#fff] h-screen '>
-      <div className='h-full w-full'>
-        <video
-          className='object-fill w-full h-full' ref={videoRef} src="https://cdn.prod.website-files.com/646c6ec121d9bb039374fb89/64eef4314bb9724aac6c50d1_Hero%20Video-transcode.mp4" muted autoPlay loop />
+    <div className='z-[2] bg-[#fff]  '>
+      <div className='w-full'>
+        <video className='object-fill w-full ' ref={videoRef} src="https://cdn.prod.website-files.com/646c6ec121d9bb039374fb89/64eef4314bb9724aac6c50d1_Hero%20Video-transcode.mp4" muted autoPlay loop />
       </div>
     </div>
   );

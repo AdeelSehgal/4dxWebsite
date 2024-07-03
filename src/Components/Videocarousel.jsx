@@ -17,7 +17,7 @@ const Videocarousel = () => {
         if (div1) {
           gsap.fromTo(div1, { y: 1 },
             {
-              y: 200,
+              y: 130,
               scrollTrigger: {
                 trigger: div1,
                 start: "top top",
@@ -28,7 +28,7 @@ const Videocarousel = () => {
             });
         }
         if (div2) {
-          gsap.fromTo(div2, { y: 200 },
+          gsap.fromTo(div2, { y: 100 },
             {
               y: 1,
               scrollTrigger: {
@@ -43,7 +43,7 @@ const Videocarousel = () => {
         if (div3) {
           gsap.fromTo(div3, { y: 1 },
             {
-              y: 200,
+              y: 130,
               scrollTrigger: {
                 trigger: div3,
                 start: "top top",
@@ -56,21 +56,21 @@ const Videocarousel = () => {
   }, []);
 
   return (
-    <div className='overflow-hidden bg-[#fff]'>
-      <div className='flex justify-center items-center min-w-[140%] relative lg:right-60 md:right-44 md:max-h-[100vh] sm:max-h-[90vh] max-h-[50vh] bg-slate-900 space-x-2 overflow-hidden my-10'>
-        <div className='' ref={div1Ref}>
+    <div className='  overflow-hidden bg-[#fff] flex justify-center  '>
+      <div className='flex justify-center items-center min-w-[150%] md:max-h-[100vh]  max-h-[50vh] bg-slate-900 space-x-2 overflow-hidden my-10'>
+        <div className=' w-[50%]' ref={div1Ref}>
           <img className='my-2' src="https://cdn.prod.website-files.com/646c6ec121d9bb039374fb89/6500443a0d2257bcb7a8c0fd_Mask%20group-min-p-1080.webp" alt="" />
           <img className='my-2' src="https://cdn.prod.website-files.com/646c6ec121d9bb039374fb89/6500455d0e99b12e4a6f358f_Mask%20group%20(3)-min-p-1080.webp" alt="" />
           <img className='my-2' src="https://cdn.prod.website-files.com/646c6ec121d9bb039374fb89/6500443fd101e433e24580a5_Mask%20group%20(1)-min-p-1080.webp" alt="" />
           <img className='my-2' src="https://cdn.prod.website-files.com/646c6ec121d9bb039374fb89/65004442f1566a7f40686bfe_Mask%20group%20(2)-min-p-1080.webp" alt="" />
         </div>
-        <div className='' ref={div2Ref}>
+        <div className='w-[50%]' ref={div2Ref}>
           <img className='my-2' src="https://cdn.prod.website-files.com/646c6ec121d9bb039374fb89/64f0a329f7025f2deda98944_Mask%20group-min-p-1080.webp" alt="" />
           <video className='my-2' src="https://assets-global.website-files.com/646c6ec121d9bb039374fb89/650be54faab5bdd334171072_first%20video-transcode.mp4" autoPlay muted loop></video>
           <video className='my-2' src="https://assets-global.website-files.com/646c6ec121d9bb039374fb89/650be5cf3d24a43c5f81c955_Second%20Video%20Parallex-transcode.mp4" autoPlay muted loop></video>
           <video className='my-2' src="https://assets-global.website-files.com/646c6ec121d9bb039374fb89/650be613684cdcb41994948c_Third%20video-transcode.mp4" autoPlay muted loop></video>
         </div>
-        <div className='' ref={div3Ref}>
+        <div className='w-[50%]' ref={div3Ref}>
           <img className='my-2' src="https://cdn.prod.website-files.com/646c6ec121d9bb039374fb89/64f0a43f50c33e727798950b_Mask%20group%20(8)-min-p-1080.webp" alt="" />
           <video autoPlay muted loop src="https://cdn.prod.website-files.com/646c6ec121d9bb039374fb89/650be613684cdcb41994948c_Third%20video-transcode.mp4"></video>
           <img className='my-2' src="https://cdn.prod.website-files.com/646c6ec121d9bb039374fb89/64f0a3ab15ebae59184fa056_Mask%20group%20(7)-min-p-1080.webp" alt="" />

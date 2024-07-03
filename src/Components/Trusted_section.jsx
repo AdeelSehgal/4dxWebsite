@@ -59,12 +59,12 @@ const Trusted_section = () => {
                     </div>
                 </button>
                 <div className="w-[80%] ">
-                    <p className="sm:text-[3vw] text-[18px] ">{slides[currentIndex].content}</p>
-                    <div className="flex items-center  mt-10">
+                    <p className="sm:text-[3vw] text-[14px] ">{slides[currentIndex].content}</p>
+                    <div className="flex items-center mt-3  md:mt-10">
                         <img src={slides[currentIndex].image} alt={slides[currentIndex].author} className="sm:w-20 sm:h-20 w-10 h-10 rounded-full mr-3" />
                         <div className="text-left">
-                            <p className="font-bold  sm:text-lg">{slides[currentIndex].author}</p>
-                            <p className="sm:text-lg  text-gray-600">{slides[currentIndex].title}</p>
+                            <p className="font-bold text-[15px]  sm:text-lg">{slides[currentIndex].author}</p>
+                            <p className="sm:text-lg  text-[15px] text-gray-600">{slides[currentIndex].title}</p>
                         </div>
                     </div>
                 </div>

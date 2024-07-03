@@ -24,48 +24,40 @@ const Subscribe = () => {
     }, []);
 
     return (
-        <div className='flex justify-evenly items-center py-10 bg-[#fff] p-5'>
-            <div className='text-[55px] w-[30%] font-semibold sticky top-0'>
+        <div className='md:flex justify-evenly items-center py-10 bg-[#fff] p-5'>
+            <div className='md:text-[55px] text-[35px]  md:w-[30%]  font-semibold sticky top-0'>
                 <h3>How it</h3>
                 <div className='text-zinc-500 membership'>works</div>
             </div>
-            <div className='  w-[40%] relative'>
-                <div className=''>
-                    <div className='flex flex-col gap-36 z-[2]'>
-                        <div className='flex justify-center items-center gap-4'>
-                            <div className='border border-zinc-800 rounded-full w-[50px] h-[50px] flex items-center justify-center font-medium text-zinc-600'>
-                                <div>01</div>
-                            </div>
-                            <div className='flex-1'>
-                                <h4 className='text-[40px] font-semibold'>Subscribe</h4>
-                                <p className='text-zinc-500'>Choose a plan and start instantly. No pesky contracts or limited scope.</p>
-                            </div>
-                        </div>
-                        <div className='flex justify-center items-center gap-4'>
-                            <div className='border border-zinc-800 bg-[#fff] relative z-10 rounded-full w-[50px] h-[50px] flex items-center justify-center font-medium text-zinc-600'>
-                                <div>02</div>
-                            </div>
-                            <div className='flex-1'>
-                                <h4 className='text-[40px] font-semibold'>Request</h4>
-                                <p className='text-zinc-500'>Start sending us your design requests, and you'll receive them in 24-48 hours on average.</p>
-                            </div>
-                        </div>
-                        <div className='flex justify-center items-center gap-4'>
-                            <div className='border border-zinc-800 rounded-full w-[50px] h-[50px] flex items-center justify-center font-medium text-zinc-600'>
-                                <div>03</div>
-                            </div>
-                            <div className='flex-1'>
-                                <h4 className='text-[40px] font-semibold'>Approve</h4>
-                                <p className='text-zinc-500'>We'll make revisions until you're 100% satisfied.</p>
-                            </div>
+            <div className='md:w-[40%] relative mt-10'>
+                <div className='flex flex-col gap-24  '>
+                    <div className='flex justify-center items-start gap-4 '>
+                        <div className='border relative z-10 border-zinc-800 rounded-full px-4 py-3 font-medium text-zinc-600 mt-3'>01</div>
+                        <div className=' '>
+                            <h4 className='md:text-[40px] text-[25px] md:font-semibold'>Subscribe</h4>
+                            <p className='text-zinc-500'>Choose a plan and start instantly. No pesky contracts or limited scope.</p>
                         </div>
                     </div>
-                    <div
-                        className='border-l mybox border-dashed border-zinc-800 absolute top-20 left-[25px] right-0'
-                        ref={myboxRef}
-                        style={{ height: 0 }}
-                    ></div>
+                    <div className='flex justify-center items-start gap-4'>
+                        <div className='border border-zinc-800 bg-[#fff] mt-3  relative z-10 rounded-full px-4 py-3  font-medium text-zinc-600'>02</div>
+                        <div className=''>
+                            <h4 className='md:text-[40px] text-[25px] md:font-semibold'>Request</h4>
+                            <p className='text-zinc-500'>Start sending us your design requests, and you'll receive them in 24-48 hours on average.</p>
+                        </div>
+                    </div>
+                    <div className='flex justify-start items-start gap-4 relative z-10 bg-[#fff]  '>
+                        <div className='border col3  border-zinc-800 rounded-full   px-4 py-3 font-medium text-zinc-600 '>03</div>
+                        <div className=''>
+                            <h4 className='md:text-[40px] text-[25px] md:font-semibold'>Approve</h4>
+                            <p className='text-zinc-500'>We'll make revisions until you're 100% satisfied.</p>
+                        </div>
+                    </div>
                 </div>
+                <div
+                    className='border-l mybox border-dashed z-[2] border-zinc-800 absolute top-[60px] left-[25px] right-0'
+                    ref={myboxRef}
+                    style={{ height: 0 }}
+                ></div>
             </div>
         </div>
     );

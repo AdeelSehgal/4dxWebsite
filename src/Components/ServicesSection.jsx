@@ -85,7 +85,7 @@ const ServicesSection = () => {
 
     return (
         <div className='bg-[#fff] pb-14  '>
-            <div className='bg-zinc-50 text-black py-10 pb-24 sm:pt-32  pt-10 rounded-b-[50px] '>
+            <div className='bg-zinc-50 text-black py-10 md:pb-24 sm:pt-32  pt-10 rounded-b-[50px] '>
                 <div className='sm:flex sm:justify-between sm:px-16 px-4  items-center mb-5 '>
                     <div className='w-[68%] sm:text-[50px] text-[35px] font-semibold' id='service'>
                         <h3>Our</h3>
