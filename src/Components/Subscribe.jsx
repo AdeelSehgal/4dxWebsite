@@ -21,7 +21,7 @@ const Subscribe = () => {
                 }
             });
         }
-    }, []);
+    }, );
 
     return (
         <div className='md:flex justify-evenly items-center py-10 bg-[#fff] p-5'>

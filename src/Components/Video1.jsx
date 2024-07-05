@@ -24,7 +24,7 @@ const Video1 = () => {
         }
       );
     }
-  }, []);
+  }, );
 
   return (
     <div className='z-[2] bg-[#fff]  '>

@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect } from 'react'
-import { Link } from 'react-router-dom'
 import HambergerMene from './HambergerMene';
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -65,11 +64,9 @@ const Navbar = ({ serviceLinkCol }) => {
     return (
         <div className=' z-[3] left-0 right-0 fixed '>
             <div style={{ background: 'black' }} className='w-[95%] text-white mt-3 flex justify-between items-center h-20 mx-auto  rounded-xl px-5 '>
-                <Link to={"/"} >
-                    <div className='cursor-pointer'>
-                        <img ref={logoRef} src="https://cdn.prod.website-files.com/646c6ec121d9bb039374fb89/6512a6905ed7ebbc2cd9f781_Group%2010100.svg" alt="" />
-                    </div>
-                </Link>
+                <div className='cursor-pointer'>
+                    <a href="/"><img ref={logoRef} src="https://cdn.prod.website-files.com/646c6ec121d9bb039374fb89/6512a6905ed7ebbc2cd9f781_Group%2010100.svg" alt="" /></a>
+                </div>
                 <div className='ml-5 hidden lg:block' >
                     <div className='flex  items-baseline gap-4 justify-center' >
                         <a style={{ backgroundColor: serviceLinkCol, borderRadius: 10 }} href="#service" > <div className="font-semibold  text-sm hover:bg-[#c9ff00] hover:text-black px-3 p-1 cursor-pointer py-2 rounded-[10px]  " ref={serviceRef} >Solutions</div></a>
@@ -92,9 +89,9 @@ const Navbar = ({ serviceLinkCol }) => {
                         </svg>
                     </div>
                     <div className='lg:flex hidden  justify-center items-center  gap-10 '>
-                        <Link to={"/Contact"} className='w-fit]'>
+                        <a href="/Contact" className='w-fit]'>
                             <button ref={BookRef} className='   text-sm font-semibold'>Book a call</button>
-                        </Link>
+                        </a>
                         <button ref={SignRef} className=' w-[9rem] py-4 font-semibold gradientbutton text-sm z-[1] bg-black  rounded-xl'>Sign up</button>
                     </div>
                 </div>

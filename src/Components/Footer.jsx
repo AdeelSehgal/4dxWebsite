@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-
 const Footer = () => {
     return (
         <div className='bg-black  md:fixed md:bottom-0 md:pt-[100vh]   w-full '>
@@ -74,9 +72,9 @@ const Footer = () => {
             <div className='md:flex justify-between items-center text-white bg-black  border-b border-t border-zinc-800 p-4 md:px-16'>
                 <div className='text-center py-4'>We Want Design © 2023</div>
                 <div className='text-zinc-500 flex justify-evenly items-center gap-x-8'>
-                    <Link className='cursor-pointer text-sm hover:text-white'>Manage Subscription</Link>
-                    <Link to='/TermsandConditions' className='cursor-pointer text-sm hover:text-white'>Terms of Services</Link>
-                    <Link to='/PrivacyandPolicy' className='cursor-pointer text-sm hover:text-white'>Privacy Policy</Link>
+                    <a className='cursor-pointer text-sm hover:text-white'>Manage Subscription</a>
+                    <a href='/TermsandConditions' className='cursor-pointer text-sm hover:text-white'>Terms of Services</a>
+                    <a href='/PrivacyandPolicy' className='cursor-pointer text-sm hover:text-white'>Privacy Policy</a>
                 </div>
             </div>
             <div className='bg-black h-12 '></div>

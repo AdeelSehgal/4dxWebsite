@@ -20,22 +20,22 @@ const Videocarousel = () => {
               y: 130,
               scrollTrigger: {
                 trigger: div1,
-                start: "top top",
+                start: "top center",
                 end: "top top",
-                scrub: 5,
+                scrub: 4,
                 markers: false,
               },
             });
         }
         if (div2) {
-          gsap.fromTo(div2, { y: 100 },
+          gsap.fromTo(div2, { y: 180 },
             {
               y: 1,
               scrollTrigger: {
                 trigger: div2,
-                start: "top top",
-                end: "top top",
-                scrub: 5,
+                start: "30% center",
+                end: "top center",
+                scrub: 4,
                 markers: false,
               },
             });
@@ -46,18 +46,18 @@ const Videocarousel = () => {
               y: 130,
               scrollTrigger: {
                 trigger: div3,
-                start: "top top",
+                start: "top center",
                 end: "top top",
-                scrub: 5,
+                scrub: 4,
                 markers: false,
               },
             });
         }
-  }, []);
+  }, );
 
   return (
     <div className='  overflow-hidden bg-[#fff] flex justify-center  '>
-      <div className='flex justify-center items-center min-w-[150%] md:max-h-[100vh]  max-h-[50vh] bg-slate-900 space-x-2 overflow-hidden my-10'>
+      <div className='flex justify-center items-center min-w-[150%] md:max-h-[140vh]  max-h-[50vh] bg-slate-900 space-x-2 overflow-hidden my-10'>
         <div className=' w-[50%]' ref={div1Ref}>
           <img className='my-2' src="https://cdn.prod.website-files.com/646c6ec121d9bb039374fb89/6500443a0d2257bcb7a8c0fd_Mask%20group-min-p-1080.webp" alt="" />
           <img className='my-2' src="https://cdn.prod.website-files.com/646c6ec121d9bb039374fb89/6500455d0e99b12e4a6f358f_Mask%20group%20(3)-min-p-1080.webp" alt="" />
