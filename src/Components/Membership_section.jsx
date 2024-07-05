@@ -53,7 +53,7 @@ const Membership_section = () => {
 
 
     return (
-        <div className='bg-[#fff] py-10 border'>
+        <div className='bg-[#fff] py-10 '>
             <div className='lg:flex justify-between md:px-14 px-4 items-center mb-5'>
                 <div className='md:w-[68%]  md:text-[55px] text-[35px] font-semibold'>
                     <h3 className='membership'>Membership</h3>

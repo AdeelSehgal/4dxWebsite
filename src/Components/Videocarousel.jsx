@@ -15,20 +15,20 @@ const Videocarousel = () => {
     const div3 = div3Ref.current;
    
         if (div1) {
-          gsap.fromTo(div1, { y: 1 },
+          gsap.fromTo(div1, { y: -50 },
             {
-              y: 130,
+              y: 50,
               scrollTrigger: {
                 trigger: div1,
-                start: "top center",
-                end: "top top",
+                start: "center center",
+                end: "center top",
                 scrub: 4,
                 markers: false,
               },
             });
         }
         if (div2) {
-          gsap.fromTo(div2, { y: 180 },
+          gsap.fromTo(div2, { y: 80 },
             {
               y: 1,
               scrollTrigger: {
@@ -41,13 +41,13 @@ const Videocarousel = () => {
             });
         }
         if (div3) {
-          gsap.fromTo(div3, { y: 1 },
+          gsap.fromTo(div3, { y: -50 },
             {
-              y: 130,
+              y: 50,
               scrollTrigger: {
                 trigger: div3,
-                start: "top center",
-                end: "top top",
+                start: "center center",
+                end: "center top",
                 scrub: 4,
                 markers: false,
               },

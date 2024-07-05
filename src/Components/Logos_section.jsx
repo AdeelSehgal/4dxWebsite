@@ -41,7 +41,7 @@ const Logos_section = () => {
                     },
                 });
         }
-    }, []);
+    }, );
 
     return (
         <div className="overflow-hidden bg-[#fff] md:py-10 py-5 pb-20  md:pb-28  flex-col items-center   "> {/* Ensures no horizontal scroll */}

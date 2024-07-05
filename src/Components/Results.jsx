@@ -39,7 +39,7 @@ const Results = () => {
                         });
                 }
           
-    }, []);
+    }, );
 
     return (
         <div className='md:flex justify-center items-center md:max-h-[80vh] w-full overflow-hidden bg-[#fff]'>
