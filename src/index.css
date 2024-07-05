@@ -156,7 +156,7 @@
     z-index: -1;
 }
 
-  
+
 .gradientbutton:hover:before {
     background: linear-gradient(320deg, #201f1f, #fafafc);
 }
@@ -193,6 +193,7 @@
 .Devgradientbutton:hover:before {
     background: linear-gradient(320deg, #ebebeb, #282828);
 }
+
 .Creative-gradientbutton {
     position: relative;
     background-color: transparent;
@@ -225,3 +226,19 @@
 .Creative-gradientbutton:hover:before {
     background: linear-gradient(320deg, #c8ff0030, #c9ff00);
 }
+
+
+.arrow:hover img{
+    transform: translate3d(28px, -20px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+    transition-duration: 0.3s;
+
+}
+
+
+
+/* .imagediv{
+    transform: translate3d(0px, 1000px, 0px);
+    transition-duration: 1s;
+    transition: ease-in;
+} */

@@ -64,8 +64,8 @@ const Footer = () => {
                         Let's build something great
                         <div className='flex items-center gap-3'>
                             <div className='text-[#c9ff00] cursor-pointer '>let's talk</div>
-                            <div className='bg-[#c9ff00] letstalk'>
-                                <img src="https://cdn.prod.website-files.com/646c6ec121d9bb039374fb89/64d5d79abf8d81d90a15c7aa_Vector%20(3).svg" alt="Black Arrow" />
+                            <div className='bg-[#c9ff00] letstalk arrow  cursor-pointer'>
+                                <img className='w-[30%]' src="https://cdn.prod.website-files.com/646c6ec121d9bb039374fb89/64d5d79abf8d81d90a15c7aa_Vector%20(3).svg" alt="Black Arrow" />
                             </div>
                         </div>
                     </div>

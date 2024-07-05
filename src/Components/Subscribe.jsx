@@ -7,17 +7,17 @@ gsap.registerPlugin(ScrollTrigger);
 const Subscribe = () => {
     const myboxRef = useRef(null);
 
+
     useEffect(() => {
         if (myboxRef.current) {
-            gsap.fromTo(myboxRef.current, { height: 0 }, {
-                height: 440,
+            gsap.fromTo(myboxRef.current, { height: 1 }, {
+                height: 430,
                 scrollTrigger: {
                     trigger: myboxRef.current,
-                    start: "top center", // When the top of myboxRef reaches the center of the viewport
-                    // end: "bottom bottom", // When the center of myboxRef reaches the center of the viewport
-                    scrub: 0.5, // Smoothly scrubs the animation
+                    start: "top 50%", // When the top of myboxRef reaches the center of the viewport
+                    end: "center top", // When the center of myboxRef reaches the center of the viewport
+                    scrub: 1, // Smoothly scrubs the animation
                     markers: false, // Uncomment this to see the start and end markers
-
                 }
             });
         }
@@ -56,7 +56,6 @@ const Subscribe = () => {
                 <div
                     className='border-l mybox border-dashed z-[2] border-zinc-800 absolute top-[60px] left-[25px] right-0'
                     ref={myboxRef}
-                    style={{ height: 0 }}
                 ></div>
             </div>
         </div>

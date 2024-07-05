@@ -89,7 +89,7 @@ const BottomBar = () => {
     }, []);
 
     return (
-        <div  ref={bottombarRef} className='md:flex  md:justify-between md:items-center px-4 md:w-[87%] w-[95%] bg-white shadow-lg rounded-xl p-3 md:h-[12vh] fixed left-0 right-0 mx-auto hidden '>
+        <div  ref={bottombarRef} className='md:flex z-20  md:justify-between md:items-center px-4 md:w-[87%] w-[95%] bg-white shadow-lg rounded-xl p-3 md:h-[12vh] fixed left-0 right-0 mx-auto hidden '>
             <div className='flex  md:justify-start justify-center items-center md:w-[60%] md:pb-0 pb-4 gap-3 font-semibold text-lg'>
                 <img width={50} src="https://cdn.prod.website-files.com/646c6ec121d9bb039374fb89/650067467c5d8668c4e07a1c_Group%2010100-min.webp" alt="" />
                 <div className=''>Giving {heading} their time back</div>

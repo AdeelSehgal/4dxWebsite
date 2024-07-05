@@ -47,7 +47,7 @@ const Trusted_section = () => {
                 <h3 className=''>Trusted by 100+</h3>
                 <div className='text-zinc-500 membership '> ambitious companies</div>
             </div>
-            <div className="flex items-center justify-between mt-11  sm:px-5 px-2  my-5 sm:gap-x-5 gap-x-2 ">
+            <div className="flex items-center justify-between mt-11 h-[60vh] sm:px-5 px-2  my-5 sm:gap-x-5 gap-x-2 ">
                 <button
                     className="group md:px-8 md:py-[34px] sm:px-5 sm:py-[22px] px-[10px] py-[12px]  rounded-full border border-zinc-400 flex items-center justify-center hover:scale-125 hover:bg-black transition duration-200"
                     onClick={handlePrevious}

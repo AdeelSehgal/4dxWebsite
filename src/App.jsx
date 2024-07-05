@@ -25,10 +25,8 @@ import Results from './Components/Results'
 import Preloader from './Components/Preloader'
 import FAQS from './Components/FAQS'
 import BottomBar from './Components/BottomBar'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-gsap.registerPlugin(ScrollTrigger);
 
+import FixedImage from './Components/FixedImage'
 
 function App() {
 
@@ -43,9 +41,10 @@ function App() {
           setLoading(false);
           return 100;
         }
+
         return prevProgress + 1; // Increment by 10% for demonstration
       });
-    }, 30); // Adjust the interval time as needed
+    }, 20); // Adjust the interval time as needed
 
     return () => clearInterval(interval);
 
@@ -73,6 +72,7 @@ function App() {
     {
       path: "/",
       element: (< >
+        <FixedImage />
         <Navbar />
         <div className='z-[2] relative md:mb-[100vh]'>
           <TextAnimation />
