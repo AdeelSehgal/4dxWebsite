@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react'
 import HambergerMene from './HambergerMene';
+import { Link } from 'react-router-dom';
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
@@ -65,7 +66,7 @@ const Navbar = ({ serviceLinkCol }) => {
         <div className=' z-[3] left-0 right-0 fixed '>
             <div style={{ background: 'black' }} className='w-[95%] text-white mt-3 flex justify-between items-center h-20 mx-auto  rounded-xl px-5 '>
                 <div className='cursor-pointer'>
-                    <a href="/"><img ref={logoRef} src="https://cdn.prod.website-files.com/646c6ec121d9bb039374fb89/6512a6905ed7ebbc2cd9f781_Group%2010100.svg" alt="" /></a>
+                    <Link to="/Home"><img ref={logoRef} src="https://cdn.prod.website-files.com/646c6ec121d9bb039374fb89/6512a6905ed7ebbc2cd9f781_Group%2010100.svg" alt="" /></Link>
                 </div>
                 <div className='ml-5 hidden lg:block' >
                     <div className='flex  items-baseline gap-4 justify-center' >
@@ -89,9 +90,9 @@ const Navbar = ({ serviceLinkCol }) => {
                         </svg>
                     </div>
                     <div className='lg:flex hidden  justify-center items-center  gap-10 '>
-                        <a href="/Contact" className='w-fit]'>
+                        <Link to="/Contact" className='w-fit]'>
                             <button ref={BookRef} className='   text-sm font-semibold'>Book a call</button>
-                        </a>
+                        </Link>
                         <button ref={SignRef} className=' w-[9rem] py-4 font-semibold gradientbutton text-sm z-[1] bg-black  rounded-xl'>Sign up</button>
                     </div>
                 </div>

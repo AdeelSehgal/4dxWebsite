@@ -1,6 +1,12 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 
 const Contact = () => {
+
+    useEffect(() => {
+     window.scrollTo(0,0)
+    }, [])
+    
+
     return (
         <div>
             <div className='bg-[#fff] relative py-20 md:px-14 px-3 z-[2] lg:mb-[100vh] pt-32 lg:flex gap-x-24 justify-evenly items-center rounded-b-[50px] '>

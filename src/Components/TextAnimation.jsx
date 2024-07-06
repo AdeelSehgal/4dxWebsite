@@ -9,7 +9,7 @@ const TextAnimation = () => {
     const LottieRef = useRef(null)
 
     useEffect(() => {
-
+        window.scrollTo(0, 0)
         setSpeed(0.5)
         console.log(LottieRef.current)
         LottieRef.current.setSpeed(speed)

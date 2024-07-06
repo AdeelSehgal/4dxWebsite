@@ -49,7 +49,7 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/TermsandConditions",
-      element: <><Navbar /> <TermsandConditions /> <Footer /></>
+      element: <> <Navbar /><TermsandConditions /> <Footer /> </>
     },
     {
       path: "/PrivacyandPolicy",
@@ -60,10 +60,40 @@ function App() {
       element: <><Navbar /> <Contact /> <Footer /></>
     },
     {
+      path: "/Home",
+      element: (
+        <>
+          <Navbar />
+          <div className='z-[2] relative md:mb-[100vh]'>
+            <TextAnimation />
+            <Video1 />
+            <TiredofTheseIssues />
+            <HomeVideo2 />
+            <HomeVideo3 />
+            <HomeVideo4 />
+            <HomeVideo5 />
+            <HomeVideo6 />
+            <ServicesSection />
+            <Videocarousel />
+            <Subscribe />
+            <Membership_section />
+            <BookCall />
+            <Trusted_section />
+            <Logos_section />
+            <Results />
+            <FAQS />
+            <Getstarted />
+            <BottomBar />
+          </div>
+          <Footer />
+        </>
+      )
+    },
+    {
       path: "/",
       element: (
         <>
-          <FixedImage />
+          <FixedImage/>
           <Navbar />
           {loading && <Preloader progress={progress} />}
           <div className='z-[2] relative md:mb-[100vh]'>
